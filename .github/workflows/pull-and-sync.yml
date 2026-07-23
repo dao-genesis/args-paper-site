@@ -1,0 +1,60 @@
+name: Pull docs from private repo and publish
+
+# 两仓紧耦合(公开仓侧拉模式): 私有主仓 dao-genesis/ARGs-Paper 是 free 套餐,
+# 私有仓 Actions 受账单限制无法运行; 而本公开仓 Actions 免费无限额。故由本仓
+# 定时 + 手动拉取私有主仓 master 的 docs/ 静态站点产物并发布(GitHub Pages 源)。
+# 只拉取可公开文件(加密密文 + 明文 data.json + 前端); 明文稿件/数据永不外泄。
+# 需要本仓 Secret: PRIVATE_SRC_TOKEN (对 dao-genesis/ARGs-Paper 有 contents:read 的 PAT)。
+
+on:
+  workflow_dispatch: {}          # 手动即时同步
+  schedule:
+    - cron: "*/10 * * * *"       # 每 10 分钟兜底同步(GitHub 定时为尽力而为, 可能有延迟)
+
+concurrency:
+  group: pull-and-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site repo
+        uses: actions/checkout@v4
+
+      - name: Pull docs/ from private repo and commit changes
+        env:
+          SRC_TOKEN: ${{ secrets.PRIVATE_SRC_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SRC_TOKEN:-}" ]; then
+            echo "::error::缺少 PRIVATE_SRC_TOKEN Secret"; exit 1
+          fi
+          SRC_REPO="dao-genesis/ARGs-Paper"
+          FILES=(index.html app.js style.css .nojekyll _headers data.json content.enc figures.enc minpack.enc)
+          api="https://api.github.com/repos/${SRC_REPO}/contents/docs"
+          for f in "${FILES[@]}"; do
+            code=$(curl -sS -w '%{http_code}' -o "__tmp_$f" \
+              -H "Authorization: token ${SRC_TOKEN}" \
+              -H "Accept: application/vnd.github.raw" \
+              "${api}/${f}?ref=master") || { echo "::warning::拉取 $f 失败(网络)"; rm -f "__tmp_$f"; continue; }
+            if [ "$code" = "200" ]; then
+              mv -f "__tmp_$f" "$f"
+            else
+              echo "::warning::主仓 docs/$f 不存在(HTTP $code), 跳过"; rm -f "__tmp_$f"
+            fi
+          done
+
+          git config user.name  "args-site-sync[bot]"
+          git config user.email "args-site-sync@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "站点产物无变化, 跳过提交。"
+          else
+            git commit -m "sync: 从私有主仓 docs/ 拉取并发布站点产物 ($(date -u +%FT%TZ))"
+            git push
+            echo "已发布最新站点产物到 main。"
+          fi
