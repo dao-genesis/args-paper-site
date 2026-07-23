@@ -6,9 +6,11 @@
 const LS_KEY = "args_gate_pass_v2";   // 记住时存口令(本机浏览器), 用于重新派生解密密钥
 const PBKDF2_ITERS = 200000;
 
-let CORE = null;   // 解密后的核心内容
+let CORE = null;   // 解密后的核心内容(稿件/表格; 不含图表)
 let OVERVIEW = null;
 let PASS = null;   // 当前会话内存中的访问口令(仅用于按需解密成果最小包, 不落盘)
+let FIGS = null;         // 图表(懒加载, 来自 figures.enc)
+let FIGS_LOADING = null; // 图表解密中的 Promise(避免重复触发)
 
 /* 从版本串解析数值(如 "v54 (…)" → 54) */
 function verNum(s) {
@@ -117,9 +119,32 @@ async function decryptEncFile(url, pass, onProgress) {
   const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, ct);
   return new Uint8Array(pt);
 }
-async function decryptCore(pass, onProgress) {
-  const pt = await decryptEncFile("content.enc", pass, onProgress);   // 口令错→AES-GCM 抛异常
+/* gunzip: 优先原生 DecompressionStream; 若明文非 gzip(向后兼容旧密文)则原样返回 */
+function looksGzip(b) { return b && b.length > 2 && b[0] === 0x1f && b[1] === 0x8b; }
+async function gunzip(bytes) {
+  if (typeof DecompressionStream === "undefined") return bytes;   // 极旧浏览器: 交回让 JSON.parse 兜底
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"));
+  return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+/* 解密(口令错→AES-GCM 抛异常) + (按需)gunzip + JSON 解析 */
+async function decryptJson(url, pass, onProgress) {
+  let pt = await decryptEncFile(url, pass, onProgress);
+  if (looksGzip(pt)) pt = await gunzip(pt);
   return JSON.parse(new TextDecoder().decode(pt));
+}
+async function decryptCore(pass, onProgress) {
+  return decryptJson("content.enc", pass, onProgress);
+}
+/* 图表懒加载: 首次进入或后台预取时解密 figures.enc, 结果缓存 */
+async function ensureFigures() {
+  if (FIGS) return FIGS;
+  if (FIGS_LOADING) return FIGS_LOADING;
+  FIGS_LOADING = (async () => {
+    const obj = await decryptJson("figures.enc", PASS);
+    FIGS = obj.figures || [];
+    return FIGS;
+  })();
+  return FIGS_LOADING;
 }
 
 /* ---------- 登录门 ---------- */
@@ -177,7 +202,7 @@ async function bootstrap() {
   if (OVERVIEW) renderOverview(OVERVIEW);
   initManuscriptControls();
   renderManuscript();
-  renderFigures(CORE);
+  renderFigures();          // 占位 + 后台解密 figures.enc(不阻塞进门)
   renderTables(CORE);
   initTableControls();
   showTab("overview");
@@ -707,8 +732,17 @@ function downloadFig(f) {
   downloadBlob(blob, figFilename(f));
   toast("已下载 " + f.id);
 }
-function renderFigures(core) {
-  const figs = core.figures || [];
+function renderFigures() {
+  const host = document.getElementById("figures");
+  const cnt = document.getElementById("fig-count");
+  if (FIGS) { paintFigures(FIGS); return; }
+  if (cnt) cnt.textContent = (CORE && CORE.n_figures) || "…";
+  if (host) host.innerHTML = `<p class="sec-note">正在本地解密图表…（首次进入后台加载，稍候即现）</p>`;
+  ensureFigures()
+    .then(() => paintFigures(FIGS))
+    .catch(() => { if (host) host.innerHTML = `<p class="sec-note">图表解密失败，请稍候重试或重新进入。</p>`; });
+}
+function paintFigures(figs) {
   const cnt = document.getElementById("fig-count");
   if (cnt) cnt.textContent = figs.length;
   document.getElementById("figures").innerHTML = figs.map((f, i) =>
