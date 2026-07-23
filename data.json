@@ -1,0 +1,362 @@
+{
+  "generated_at": "2026-07-23 15:47 UTC",
+  "repo": "dao-genesis/ARGs-Paper",
+  "branch": "master",
+  "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
+  "git_head": {
+    "hash": "1ba93a8",
+    "date": "2026-07-23 15:42:51 +0000",
+    "subject": "v58: 正文/SI 13 张内嵌图统一换 TNR 新图 (作者授权改稿) + GA 重设计; 重建投稿包 + 四校验器 + PROJECT_STATE/表单同步"
+  },
+  "has_encrypted_core": true,
+  "project": {
+    "title": "Desert soil resistome stability masks Actinobacteria-linked compositional restructuring along a drought gradient",
+    "primary_track": "Environmental Research",
+    "secondary_track": "Scientific Data",
+    "phase": "ER 权威稿推进至 v56（以作者最新真实稿为唯一内容基线: 13 主图已内嵌正文、SI 收敛 S1–S4、Cover Letter 含 ORCID+4 作者; 前向移植 Fig 7 Mantel-only 去重 (内嵌图/图注/正文引用同步); 老师#9 Results 去参考文献 (Liu&Pop 2009 / Borcard 2018 移入 Methods/Discussion); 老师#10 ARDB 缩写 glossary 移出 Results 入 Methods 2.5）；投稿包重建为 v58（正文/SI 13 张内嵌图由作者原图统一替换为我方 Times New Roman 重绘图 + GA 重设计；稿件文字/图注/表/全部锁定数值与 v56 字节一致；Manuscript_v57.docx；承 v57 图内字体 TNR + 每图 300dpi TIFF）；四校验器闭合(deep 73/cross 60/zip 82 + 8INFO/complete 93PASS 0WARN)；唯余 F3 人类门（第一作者 ORCID 核实、5 位审稿人邮箱+COI、APC/提交系统）",
+    "verified_at": "2026-07-23"
+  },
+  "submission": {
+    "er": {
+      "status": "machine_ready_human_confirmation_required",
+      "package": "七_投稿_Submission/ER_Submission_v58_Final.zip",
+      "version": "v58 (正文/SI 内嵌图统一换为 TNR 新图 · GA 重设计 · 稿件文字/数据/统计不变)",
+      "sha256": "B25214FB39928FB2680D83DF7042FD864F0C93FB91DF79285821B6554F245766",
+      "contents": "Manuscript_v57.docx (13 内嵌图=TNR 新图: 正文 Fig.1-9 + SI S1-S4; 文字/表/数值与 v56 一致) + Cover Letter (ORCID) + Highlights (5) + references.bib; Figs 1-9 + GA (PDF + 300dpi TIFF); SuppFig S1-S4 (PDF+PNG+TIFF); Tables S1-S10 + D14-D18; Pipeline_SRA_to_CARD",
+      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v58_Final.zip"
+    },
+    "scidata": {
+      "status": "defer_until_er_or_data_doi_ready",
+      "package": "七_投稿_Submission/SciData_Submission_v1_Final.zip",
+      "version": "v1",
+      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/SciData_Submission_v1_Final.zip"
+    }
+  },
+  "cite": {
+    "title": "Desert soil resistome stability masks Actinobacteria-linked compositional restructuring along a drought gradient",
+    "authors": "Zhou, Youkang and Li, Wenjing",
+    "authors_display": "Youkang Zhou, Wenjing Li",
+    "year": "2026",
+    "journal": "Environmental Research",
+    "note": "Under review / 投稿中",
+    "affiliation": "College of Ecology and Environment, Xinjiang University, Urumqi 830017, China"
+  },
+  "blanks": [
+    {
+      "id": "F1",
+      "key": "F1_precipitation_citation",
+      "owner": "学生/导师",
+      "status": "machine_verified_and_cited",
+      "blocking": false,
+      "machine_status": "citation_added_to_v41_para15_via_institutional_vpn_fulltext_verification",
+      "next_action": "89.9 mm 真实可引, 为艾比湖年降水区间 89.9–169.7 mm 之下界; §2.1 para15 已补 (Wang et al., 2021) [bib 已含 wang2021ebinur, 无需新增]; §2.1 para11 同句已带 Wang et al. (2021) 叙述引用。Li 2022a 报 105 mm(引 Zhang 2015), Li 2022b 报 ~100 mm — 故 89.9 不出自两篇姊妹论文。"
+    },
+    {
+      "id": "F2",
+      "key": "F2_submission_strategy",
+      "owner": "导师",
+      "status": "er_primary_scidata_deferred_by_current_docs",
+      "blocking": false,
+      "machine_status": "strategy_recommended",
+      "next_action": "若只投 ER，记录导师确认；若同步 SciData，先补 DOI/reviewer link。"
+    },
+    {
+      "id": "F3",
+      "key": "F3_editorial_manager_metadata",
+      "owner": "导师/通讯作者",
+      "status": "pending_human_input",
+      "blocking": true,
+      "machine_status": "submission_guide_ready",
+      "next_action": "提供 ORCID、建议审稿人邮箱与 COI、APC 预算确认，并在 EM 中填写。"
+    },
+    {
+      "id": "F4",
+      "key": "F4_student_authorship",
+      "owner": "学生",
+      "status": "explicit_genai_disclosure_applied_pending_author_signoff",
+      "blocking": true,
+      "machine_status": "accurate_disclosure_written_to_v41_authorship_signoff_still_human",
+      "next_action": "[2026-07-02 更新] 已采诚实披露路径: v41 声明升级为准确完整版 (B-2 级, 见 _patch_genai_declaration_v41.py + 备份). 唯余作者署名认领并对内容负全责; 若作者反而选'真亲笔重写'路径, 可从 _archive_prior_versions 回滚声明后自行重写 §2.6/§4.2/§4.4/§4.5/§5。"
+    },
+    {
+      "id": "F5",
+      "key": "F5_post_acceptance_doi",
+      "owner": "接受后执行",
+      "status": "not_due_until_acceptance",
+      "blocking": false,
+      "machine_status": "doi_fill_script_ready",
+      "next_action": "接收后 mint Figshare / Zenodo DOI，再运行填 DOI 脚本。"
+    }
+  ],
+  "validators": [
+    {
+      "key": "verify_deep_layer",
+      "name": "深层根验证 verify_deep_layer",
+      "detail": "PASS exit 0 · PASS 73 WARN 0 FAIL 0",
+      "status": "pass",
+      "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_verify_deep_layer.py"
+    },
+    {
+      "key": "cross_verify_figures",
+      "name": "三方图表闭环 cross_verify_figures",
+      "detail": "PASS exit 0 · GA literal-text 项为可选警告 (PyMuPDF 可用时触发), 非缺陷",
+      "status": "pass",
+      "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_cross_verify_figures.py"
+    },
+    {
+      "key": "validate_zip",
+      "name": "投稿包 SHA 校验 validate_zip",
+      "detail": "exit 1 · 75 PASS / 1 WARN / 0 FAIL (against v54 package) · WARN=Highlights 未含 tigecycline 关键词, 版本无关既有软建议, 非阻塞",
+      "status": "warn",
+      "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_validate_zip.py"
+    },
+    {
+      "key": "validate_submission_complete",
+      "name": "投稿完整性 validate_submission_complete",
+      "detail": "NO-GO exit 2 · 92 PASS / 1 WARN / 1 FAIL · only F3 human blocker remains (against v54 package)",
+      "status": "blocked",
+      "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_validate_submission_complete.py"
+    },
+    {
+      "key": "dao_review_ai_detection",
+      "name": "AI 味/多维审阅 dao_review",
+      "detail": "exit 0 (dao_review) · AI 密度项为致密定量科学文固有低困惑度, 已如实声明 GenAI 辅助; handled by F4 human choice",
+      "status": "pass",
+      "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/dao_review.py"
+    }
+  ],
+  "reproducibility": [
+    {
+      "key": "l0_raw_gene_catalog",
+      "status": "off_repo_required_for_full_rebuild",
+      "blocking_submission": false,
+      "blocking_full_repro": true,
+      "next_action": ""
+    },
+    {
+      "key": "l1_advisor_weighting",
+      "status": "algorithm_not_documented_by_advisor",
+      "blocking_submission": false,
+      "blocking_full_repro": true,
+      "next_action": ""
+    },
+    {
+      "key": "network_286_edges",
+      "status": "authoritative_value_locked_not_reproducible_from_current_l1",
+      "blocking_submission": false,
+      "blocking_full_repro": true,
+      "next_action": "优先从 L0 复跑；若短期不可行，内部记录并在审稿响应预案中说明 L1 与 L0 差异。"
+    }
+  ],
+  "rounds": [
+    {
+      "key": "taxonomy_16gb_robustness",
+      "label": "16GB 分类稳健性(回应审稿伪迹质疑)",
+      "status": "machine_verified_SI_registered_and_manuscript_prose_inserted_v41",
+      "purpose": "回应'8GB上限标准库分类率仅~6-9%，bulk-soil Actino–SWC强负相关是否为低分类率伪迹'之审稿质疑",
+      "verified_at": "2026-06-25T18:45:00Z",
+      "bottom_line": ""
+    },
+    {
+      "key": "citation_audit_round6",
+      "label": "引用审计 R6 · 元数据级(55 条 Crossref)",
+      "status": "machine_verified_all_55_entries_via_crossref_bib_and_docx_synced",
+      "purpose": "彻底完善引用模块：用 Crossref 出版商存储元数据逐条核验全部 55 条 bib，修正可核验错误并同步 v41 docx(in-text + 参考表)，零捏造",
+      "verified_at": "2026-06-26T04:28:00Z",
+      "bottom_line": ""
+    },
+    {
+      "key": "citation_audit_round7_claim_level",
+      "label": "引用审计 R7 · claim-level 全文核验",
+      "status": "machine_verified_claim_level_via_institutional_webvpn_fulltext",
+      "purpose": "claim-level 升级：不止元数据，逐条核验被引论文全文/摘要是否真支持正文归因的论断与数值；用新疆大学图书馆 webvpn 全文权限",
+      "verified_at": "2026-06-26T06:35:00Z",
+      "bottom_line": ""
+    },
+    {
+      "key": "benchmark_round8_positioning",
+      "label": "R8 · 对标同领域 7 篇定位诊断",
+      "status": "machine_benchmarked_vs_peer_literature",
+      "purpose": "反者道之动：从根本对照同领域优质论文，多维度差距/问题分析，反向推进可机器安全落地的改进，区分作者决策项",
+      "verified_at": "2026-06-26T07:10:00Z",
+      "bottom_line": "方法学竞争力为同niche竞争-领先档。领先项:统计透明度/双库(ARDB↔CARD)交叉验证/成分数据(CLR/Aitchison)处理/可复现(SRA+Snakemake)/直接Kraken2分类验证。"
+    }
+  ],
+  "modules": [
+    {
+      "dir": "〇_道_DAO",
+      "title": "道 · 治理与单源真相",
+      "desc": "项目宪法/权威单源/历史审计/与导师交流收件箱",
+      "icon": "compass",
+      "files": 33,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E3%80%87_%E9%81%93_DAO"
+    },
+    {
+      "dir": "一_数据_Data",
+      "title": "数据 · L0→L4 谱系",
+      "desc": "原始测序谱系、L1 导师源、L2/L3 复归、L4 权威锁定值",
+      "icon": "database",
+      "files": 81,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%80_%E6%95%B0%E6%8D%AE_Data"
+    },
+    {
+      "dir": "二_分析_Analysis",
+      "title": "分析 · 可复现管线",
+      "desc": "R/vegan + Python 全链路复归、敏感性分析、E2E 校验",
+      "icon": "flask",
+      "files": 41,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%8C_%E5%88%86%E6%9E%90_Analysis"
+    },
+    {
+      "dir": "三_图表_Figures",
+      "title": "图表 · 出版级图件",
+      "desc": "Fig.1–9 + Graphical Abstract + SI 图，脚本化生成",
+      "icon": "chart",
+      "files": 129,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%89_%E5%9B%BE%E8%A1%A8_Figures"
+    },
+    {
+      "dir": "四_参考论文_References",
+      "title": "参考 · 文献库",
+      "desc": "参考素材与文献库(claim-level 审计对照源)",
+      "icon": "book",
+      "files": 35,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%9B%9B_%E5%8F%82%E8%80%83%E8%AE%BA%E6%96%87_References"
+    },
+    {
+      "dir": "五_稿件_Manuscripts",
+      "title": "稿件 · 主稿与姐妹稿",
+      "desc": "ER 主稿 v57(终稿·内嵌 TNR 新图) + SciData 姐妹稿 + 中文工作区",
+      "icon": "doc",
+      "files": 199,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
+    },
+    {
+      "dir": "六_补充材料_Supplementary",
+      "title": "补充材料",
+      "desc": "Supp Fig S1–S7 + Tables S1–S10 + D14–D18 + 稳健性报告",
+      "icon": "layers",
+      "files": 76,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AD_%E8%A1%A5%E5%85%85%E6%9D%90%E6%96%99_Supplementary"
+    },
+    {
+      "dir": "七_投稿_Submission",
+      "title": "投稿 · 打包与指南",
+      "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
+      "icon": "send",
+      "files": 32,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
+    },
+    {
+      "dir": "八_验证_Validation",
+      "title": "验证 · 多维校验",
+      "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
+      "icon": "shield",
+      "files": 67,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
+    },
+    {
+      "dir": "九_AI辅助_AIAssist",
+      "title": "AI 辅助",
+      "desc": "AI 检测器、提示词、写作道器全册",
+      "icon": "spark",
+      "files": 31,
+      "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B9%9D_AI%E8%BE%85%E5%8A%A9_AIAssist"
+    }
+  ],
+  "downloads": [
+    {
+      "name": "ER 投稿包 (v58 Final ZIP)",
+      "path": "七_投稿_Submission/ER_Submission_v58_Final.zip",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v58_Final.zip"
+    },
+    {
+      "name": "ER 主稿 Manuscript v57 (docx)",
+      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v57.docx",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v57.docx"
+    },
+    {
+      "name": "反向审视报告 (2026-07-02)",
+      "path": "八_验证_Validation/_反向审视报告_2026-07-02.md",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_%E5%8F%8D%E5%90%91%E5%AE%A1%E8%A7%86%E6%8A%A5%E5%91%8A_2026-07-02.md"
+    },
+    {
+      "name": "MGE/MAG 增强可复现 Protocol",
+      "path": "二_分析_Analysis/_ENHANCEMENT_PROTOCOL_MGE_MAG.md",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%8C_%E5%88%86%E6%9E%90_Analysis/_ENHANCEMENT_PROTOCOL_MGE_MAG.md"
+    },
+    {
+      "name": "GenAI 使用声明(草案+落地记录)",
+      "path": "五_稿件_Manuscripts/主稿_ER终稿/_GenAI_Use_声明草案.md",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/_GenAI_Use_%E5%A3%B0%E6%98%8E%E8%8D%89%E6%A1%88.md"
+    },
+    {
+      "name": "F3 Editorial Manager 提交指南",
+      "path": "七_投稿_Submission/_F3_Editorial_Manager_完整提交指南.md",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/_F3_Editorial_Manager_%E5%AE%8C%E6%95%B4%E6%8F%90%E4%BA%A4%E6%8C%87%E5%8D%97.md"
+    },
+    {
+      "name": "PROJECT_STATE.yaml (单源真相)",
+      "path": "PROJECT_STATE.yaml",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/blob/master/PROJECT_STATE.yaml"
+    }
+  ],
+  "minpack": {
+    "filename": "ARGs_成果最小包_v58.zip",
+    "enc_file": "minpack.enc",
+    "zip_bytes": 4601565,
+    "sha256": "72F7AA47D61720B89401D4141E558E4C788CF0D5126546CF23D71E8EA063AEA8",
+    "items": [
+      {
+        "name": "01_核心稿_Manuscript_v57.docx",
+        "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 文字同 v56, 内嵌图=TNR 新图)",
+        "bytes": 3617220
+      },
+      {
+        "name": "图_Graphical_Abstract.png",
+        "desc": "图形摘要 · Graphical Abstract",
+        "bytes": 137492
+      },
+      {
+        "name": "图_Fig1_AlphaDiversity.png",
+        "desc": "Fig 1 · Alpha 多样性",
+        "bytes": 149073
+      },
+      {
+        "name": "图_Fig2_PCoA.png",
+        "desc": "Fig 2 · PCoA 排序 (Bray–Curtis)",
+        "bytes": 181316
+      },
+      {
+        "name": "图_Fig5_Network_Risk.png",
+        "desc": "Fig 5 · 共现网络与风险分类 (66 节点 / 286 边)",
+        "bytes": 213727
+      },
+      {
+        "name": "图_Fig8_Actino_vs_Water.png",
+        "desc": "Fig 8 · 放线菌门丰度 vs 土壤含水量",
+        "bytes": 172051
+      },
+      {
+        "name": "图_Fig9_CARD_Drought.png",
+        "desc": "Fig 9 · CARD 药类耐药 vs 干旱梯度",
+        "bytes": 202015
+      },
+      {
+        "name": "表_TableS1_samples.csv",
+        "desc": "Table S1 · 样品信息 (43 宏基因组)",
+        "bytes": 2371
+      },
+      {
+        "name": "表_TableS3_network_hubs.csv",
+        "desc": "Table S3 · 共现网络 Hub 节点",
+        "bytes": 1553
+      },
+      {
+        "name": "表_TableS5_CARD_drugclass_drought.csv",
+        "desc": "Table S5 · CARD 药类 × 干旱",
+        "bytes": 1094
+      }
+    ]
+  }
+}

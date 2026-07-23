@@ -1,0 +1,14 @@
+# Cloudflare Pages headers — cache immutable-ish encrypted payloads so mobile
+# repeat-logins skip both the re-download and the revalidation round-trip.
+# Filenames are stable; on redeploy the ETag changes and stale-while-revalidate
+# refreshes in the background, so users never block on a cold multi-MB fetch.
+/content.enc
+  Cache-Control: public, max-age=3600, stale-while-revalidate=604800
+/minpack.enc
+  Cache-Control: public, max-age=3600, stale-while-revalidate=604800
+
+# Versioned static assets (loaded with ?v=... busting) can cache longer.
+/app.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/style.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800

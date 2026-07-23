@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>ARGs 论文 · 全内容工作台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1117'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23d4a84b' font-family='serif'%3E道%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css?v=20260718f" />
+</head>
+<body>
+
+<!-- 登录门(客户端口令·口令即解密密钥) -->
+<div id="gate" class="gate">
+  <div class="gate-card">
+    <div class="gate-mark">道</div>
+    <h1>ARGs 论文 · 全内容工作台</h1>
+    <p class="gate-sub">Desert soil resistome · Environmental Research 投稿</p>
+    <input id="gate-input" type="password" placeholder="请输入访问口令" autocomplete="off" />
+    <button id="gate-btn">进入</button>
+    <p id="gate-err" class="gate-err"></p>
+    <p class="gate-note">核心内容(稿件/图表/表格)以口令派生密钥 AES-256-GCM 加密，
+      浏览器内本地解密后直接查看；无口令者仅得密文。</p>
+    <label class="gate-remember"><input type="checkbox" id="gate-remember" /> 在此浏览器记住</label>
+  </div>
+</div>
+
+<main id="app" class="app hidden">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-mark">道</div>
+      <div>
+        <h1 id="p-title">—</h1>
+        <p class="hero-meta">
+          <span class="track" id="p-track">—</span>
+          <span class="dot">·</span>
+          <span id="p-phase">—</span>
+        </p>
+      </div>
+      <div class="hero-tools">
+        <button id="theme-btn" class="iconbtn" title="切换明/暗主题">☾</button>
+      </div>
+      <div class="hero-ring">
+        <div class="ring" id="ring"><span id="ring-pct">—</span></div>
+        <div class="ring-label">机器就绪度</div>
+      </div>
+    </div>
+    <nav class="tabnav" id="tabnav"></nav>
+  </header>
+
+  <!-- ============ 概览 ============ -->
+  <section class="wrap panel" id="panel-overview">
+    <div class="kpis" id="kpis"></div>
+
+    <h2 class="sec" id="sec-submission">投稿就绪 · Submission</h2>
+    <div class="grid2" id="submission"></div>
+
+    <h2 class="sec" id="sec-cite">引用本文 · Cite</h2>
+    <div id="cite"></div>
+
+    <h2 class="sec" id="sec-blanks">人类确认门 · F1–F5</h2>
+    <p class="sec-note">机器可决部分已闭合；下列标注 <b>阻塞</b> 者需真人动作方可投稿（不可代行）。</p>
+    <div class="blanks" id="blanks"></div>
+
+    <h2 class="sec" id="sec-validators">机器验证 · Validation</h2>
+    <div class="grid" id="validators"></div>
+
+    <h2 class="sec" id="sec-repro">数据可复现性 · Reproducibility</h2>
+    <div class="grid" id="repro"></div>
+
+    <h2 class="sec" id="sec-rounds">审计与稳健性历程 · Rounds</h2>
+    <div class="timeline" id="rounds"></div>
+
+    <h2 class="sec" id="sec-modules">项目板块 · Modules</h2>
+    <div class="modules" id="modules"></div>
+
+    <h2 class="sec" id="sec-minpack">成果最小包 · Minimal Results Pack</h2>
+    <div id="minpack"></div>
+
+    <h2 class="sec" id="sec-downloads">下载与文档 · Downloads</h2>
+    <div class="downloads" id="downloads"></div>
+  </section>
+
+  <!-- ============ 稿件全文 ============ -->
+  <section class="wrap panel hidden" id="panel-manuscript">
+    <div class="doc-toolbar">
+      <div class="seg" id="ms-lang" role="tablist" aria-label="语言">
+        <button class="seg-btn" data-lang="en">EN</button>
+        <button class="seg-btn" data-lang="zh">中文</button>
+        <button class="seg-btn active" data-lang="both">对照</button>
+      </div>
+      <input id="ms-search" type="search" placeholder="在稿件中查找…（回车跳下一处，Shift+回车上一处）" />
+      <span id="ms-count" class="ms-count"></span>
+      <div class="doc-tools">
+        <button id="ms-fdec" class="iconbtn" title="减小字号">A−</button>
+        <button id="ms-finc" class="iconbtn" title="增大字号">A＋</button>
+        <button id="ms-serif" class="iconbtn" title="衬线 / 无衬线切换">衬线</button>
+        <button id="ms-copyall" class="iconbtn" title="复制当前语言全文">⧉ 全文</button>
+        <button id="ms-print" class="iconbtn" title="打印 / 导出 PDF">🖶 打印</button>
+      </div>
+      <span id="ms-meta" class="doc-meta"></span>
+    </div>
+    <div class="ms-progress" id="ms-progress"><div id="ms-progbar"></div></div>
+    <div class="doc-layout">
+      <aside class="doc-toc" id="ms-toc"></aside>
+      <article class="doc" id="manuscript"></article>
+    </div>
+  </section>
+
+  <!-- ============ 图表 ============ -->
+  <section class="wrap panel hidden" id="panel-figures">
+    <p class="sec-note">点击任意图放大查看；每张图可单独下载原图。共 <span id="fig-count">—</span> 张。</p>
+    <div class="fig-grid" id="figures"></div>
+  </section>
+
+  <!-- ============ 表格 ============ -->
+  <section class="wrap panel hidden" id="panel-tables">
+    <div class="tbl-picker" id="tbl-picker"></div>
+    <div class="tbl-toolbar">
+      <input id="tbl-filter" type="search" placeholder="在本表中筛选行…" />
+      <div class="doc-tools">
+        <button id="tbl-copy" class="iconbtn" title="复制整表 (TSV)">⧉ 复制表</button>
+        <button id="tbl-csv" class="iconbtn" title="下载 CSV">↓ CSV</button>
+      </div>
+    </div>
+    <div id="tables"></div>
+  </section>
+
+  <footer class="foot">
+    <p id="foot-gen">—</p>
+    <p class="tao">大成若缺，其用不敝 · 为而弗恃 · 道法自然</p>
+    <p><a id="foot-pr" href="#" target="_blank" rel="noopener">Pull Requests</a> ·
+       <a id="foot-repo" href="#" target="_blank" rel="noopener">GitHub 仓库</a> ·
+       <button id="logout" class="linkbtn">退出</button></p>
+  </footer>
+</main>
+
+<!-- 图片灯箱 -->
+<div id="lightbox" class="lightbox hidden">
+  <button class="lb-close" id="lb-close">×</button>
+  <button class="lb-dl" id="lb-dl" title="下载原图">↓ 下载</button>
+  <img id="lb-img" src="" alt="" />
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
+
+<!-- 回到顶部 + toast -->
+<button id="totop" class="totop hidden" title="回到顶部">↑</button>
+<div id="toast" class="toast"></div>
+
+<script src="app.js?v=20260718f"></script>
+</body>
+</html>
