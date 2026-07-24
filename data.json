@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-24 06:15 UTC",
+  "generated_at": "2026-07-24 06:30 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "375e6d9",
-    "date": "2026-07-24 06:11:49 +0000",
-    "subject": "v59: 彻底移除旧 Fig.S2 孤儿图 (drop rId18 关系+image11.png), 重打投稿包/网站/校验"
+    "hash": "6d56ebc",
+    "date": "2026-07-24 14:16:52 +0800",
+    "subject": "Merge PR #39: v59 (研究区地图 Fig.1 + 全图重编号 + 删旧FigS2 + D→S统一表号 + Fig6B图注)"
   },
   "has_encrypted_core": true,
   "project": {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 70,
+      "files": 71,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
