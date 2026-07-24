@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-23 16:18 UTC",
+  "generated_at": "2026-07-23 16:30 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "3a66f04",
-    "date": "2026-07-23 16:09:55 +0000",
-    "subject": "PROJECT_STATE: 记录网站迁移至 GitHub Pages (dao-genesis/args-paper-site · v58 · 已核验)"
+    "hash": "19e6959",
+    "date": "2026-07-24 00:27:26 +0800",
+    "subject": "移除私有仓 Actions 同步流水线(free 套餐账单限制无法运行, 恒失败); 两仓同步改由公开站点仓侧拉模式(免费无限额)实现 (#36)"
   },
   "has_encrypted_core": true,
   "project": {
     "title": "Desert soil resistome stability masks Actinobacteria-linked compositional restructuring along a drought gradient",
     "primary_track": "Environmental Research",
     "secondary_track": "Scientific Data",
-    "phase": "ER 权威稿推进至 v56（以作者最新真实稿为唯一内容基线: 13 主图已内嵌正文、SI 收敛 S1–S4、Cover Letter 含 ORCID+4 作者; 前向移植 Fig 7 Mantel-only 去重 (内嵌图/图注/正文引用同步); 老师#9 Results 去参考文献 (Liu&Pop 2009 / Borcard 2018 移入 Methods/Discussion); 老师#10 ARDB 缩写 glossary 移出 Results 入 Methods 2.5）；投稿包重建为 v58（正文/SI 13 张内嵌图由作者原图统一替换为我方 Times New Roman 重绘图 + GA 重设计；稿件文字/图注/表/全部锁定数值与 v56 字节一致；Manuscript_v57.docx；承 v57 图内字体 TNR + 每图 300dpi TIFF）；四校验器闭合(deep 73/cross 60/zip 82 + 8INFO/complete 93PASS 0WARN)；唯余 F3 人类门（第一作者 ORCID 核实、5 位审稿人邮箱+COI、APC/提交系统）",
+    "phase": "ER 权威稿已收口为 v58（内容基线承自 v56 作者最新真实稿: 13 主图已内嵌正文、SI 收敛 S1–S4、Cover Letter 含 ORCID+4 作者; 前向移植 Fig 7 Mantel-only 去重 (内嵌图/图注/正文引用同步); 老师#9 Results 去参考文献 (Liu&Pop 2009 / Borcard 2018 移入 Methods/Discussion); 老师#10 ARDB 缩写 glossary 移出 Results 入 Methods 2.5）；投稿包 v58（正文/SI 13 张内嵌图由作者原图统一替换为我方 Times New Roman 重绘图 + GA 重设计；稿件文字/图注/表/全部锁定数值与 v56 字节一致；Manuscript_v57.docx；承 v57 图内字体 TNR + 每图 300dpi TIFF）；四校验器闭合(deep 73/cross 60/zip 82 + 8INFO/complete 93PASS 0WARN)；唯余 F3 人类门（第一作者 ORCID 核实、5 位审稿人邮箱+COI、APC/提交系统）",
     "verified_at": "2026-07-23"
   },
   "submission": {
