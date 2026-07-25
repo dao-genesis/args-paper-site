@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-24 06:30 UTC",
+  "generated_at": "2026-07-24 15:20 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "6d56ebc",
-    "date": "2026-07-24 14:16:52 +0800",
-    "subject": "Merge PR #39: v59 (研究区地图 Fig.1 + 全图重编号 + 删旧FigS2 + D→S统一表号 + Fig6B图注)"
+    "hash": "77972a2",
+    "date": "2026-07-24 14:30:51 +0800",
+    "subject": "Merge PR #40: v59 网站补充表徽章去 D 系列字样"
   },
   "has_encrypted_core": true,
   "project": {
     "title": "Desert soil resistome stability masks Actinobacteria-linked compositional restructuring along a drought gradient",
     "primary_track": "Environmental Research",
     "secondary_track": "Scientific Data",
-    "phase": "ER 权威稿已收口为 v59（结构性落实老师 2026-07-21 需求: 新增研究区三点采样地图作为 Fig.1、旧 Fig.1-9 级联重编为 Fig.2-10、旧 Fig.6B→Fig.7B 且图注 Venn→横向条形图、删重复旧 FigS2 Mantel 热图并 SI 重编 S1-S3、D14-D18 混乱表号统一为 Supplementary Table S1-S8 并裁到 8 张; 内容基线仍承 v56 作者最新真实稿, 所有锁定科学值不变; Manuscript_v59.docx, build_v59.py 落地, LibreOffice 49 页复核）；投稿包 v59（SHA B2ADA305…; 承 v57/v58 图内 TNR + 300dpi TIFF）；四校验器闭合(deep 73/cross 60/zip 77/complete 93PASS 0WARN)；唯余 F3 人类门（第一作者 ORCID 核实、5 位审稿人邮箱+COI、APC/提交系统）",
-    "verified_at": "2026-07-23"
+    "phase": "ER 权威稿已收口为 v60（图表出版质量收口: 清除全部出版图内部 QA/交叉校验脚手架文字[AUDIT_CROSSCHECK/R·vegan/adonis2/rel-abund/'this study:'双计数/ns-FDR]、网络图不再打印与权威值冲突的 Python 重建计数[权威 66节点/286边/Q=0.159 仅存于图注与 GA]、修复研究区地图 A/B/C 叠标(改磁化 transect 内插图)+PCoA 环境矢量标签与 PERMANOVA 框压点+Alpha Chao1 注记+热图副标题拥挤; 仅图内文字/排版变动, 无任何数据/统计/结论/编号/表格/图注改动, 图数仍 10 主+3 SI; Manuscript_v60.docx 由 v59 仅换净化栅格重嵌, build_v60.py 落地）；投稿包 v60（SHA 04DDA088…）；新增反向核查校验器 _reverse_audit_figures.py（脚手架泄漏/冲突数字/越界裁剪, repo+zip 56PASS 0FAIL）；四校验器闭合(deep 73/cross 60/zip 77/complete GO 除 F3)；唯余 F3 人类门（第一作者 ORCID 核实、5 位审稿人邮箱+COI、APC/提交系统）",
+    "verified_at": "2026-07-24"
   },
   "submission": {
     "er": {
       "status": "machine_ready_human_confirmation_required",
-      "package": "七_投稿_Submission/ER_Submission_v59_Final.zip",
-      "version": "v59 (新增 Fig.1 研究区地图·旧图级联重编 Fig.1-10·删旧 FigS2 Mantel·SI重编 S1-S3·D→S 统一补充表号·锁定科学值不变)",
-      "sha256": "B2ADA305AFFDAA11C55FEFAD1E56772907300AADFACF9B824857A825F2927CBE",
-      "contents": "Manuscript_v59.docx (正文 Fig.1-10 [Fig.1=研究区地图] + SI S1-S3 内嵌=TNR 新图; 文字/表/锁定数值与 v56 一致) + Cover Letter (ORCID) + Highlights (5) + references.bib; Figs 1-10 + GA (PDF + 300dpi TIFF); SuppFig S1-S3 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列); Pipeline_SRA_to_CARD",
-      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v59_Final.zip"
+      "package": "七_投稿_Submission/ER_Submission_v60_Final.zip",
+      "version": "v60 (图表出版质量收口: 净化出版图脚手架文字·网络冲突计数移除·覆盖/拥挤修复; 无数据/统计/结论/编号/表格/图注改动, 承 v59 结构)",
+      "sha256": "04DDA088EF83FDFC63FF49DF71A31318FD52A35E304E71D5A6223E8931515316",
+      "contents": "Manuscript_v60.docx (正文 Fig.1-10 [Fig.1=研究区地图] + SI S1-S3 内嵌=净化后 TNR 图; 文字/表/锁定数值与 v56 一致) + Cover Letter (ORCID) + Highlights (5) + references.bib; Figs 1-10 + GA (PDF + 300dpi TIFF); SuppFig S1-S3 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列); Pipeline_SRA_to_CARD",
+      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v60_Final.zip"
     },
     "scidata": {
       "status": "defer_until_er_or_data_doi_ready",
@@ -226,9 +226,9 @@
     {
       "dir": "五_稿件_Manuscripts",
       "title": "稿件 · 主稿与姐妹稿",
-      "desc": "ER 主稿 v59(终稿·新增 Fig.1 研究区地图·全图重编号) + SciData 姐妹稿 + 中文工作区",
+      "desc": "ER 主稿 v60(终稿·图表收口·新增 Fig.1 研究区地图·全图重编号) + SciData 姐妹稿 + 中文工作区",
       "icon": "doc",
-      "files": 201,
+      "files": 203,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
     },
     {
@@ -244,7 +244,7 @@
       "title": "投稿 · 打包与指南",
       "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
       "icon": "send",
-      "files": 34,
+      "files": 36,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
     },
     {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 71,
+      "files": 74,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
@@ -266,14 +266,14 @@
   ],
   "downloads": [
     {
-      "name": "ER 投稿包 (v59 Final ZIP)",
-      "path": "七_投稿_Submission/ER_Submission_v59_Final.zip",
-      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v59_Final.zip"
+      "name": "ER 投稿包 (v60 Final ZIP)",
+      "path": "七_投稿_Submission/ER_Submission_v60_Final.zip",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v60_Final.zip"
     },
     {
-      "name": "ER 主稿 Manuscript v59 (docx)",
-      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v59.docx",
-      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v59.docx"
+      "name": "ER 主稿 Manuscript v60 (docx)",
+      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v60.docx",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v60.docx"
     },
     {
       "name": "反向审视报告 (2026-07-02)",
@@ -302,45 +302,45 @@
     }
   ],
   "minpack": {
-    "filename": "ARGs_成果最小包_v59.zip",
+    "filename": "ARGs_成果最小包_v60.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 5337237,
-    "sha256": "F45A3E41805EBB81A924FDC6E08313D2FFAD15F969D95D3C61D3C8B1F1703D83",
+    "zip_bytes": 5141973,
+    "sha256": "1277E93517EBEB28CCAA0C097B4D086F11E6AF0D7D53FE60F793834D547E5EF7",
     "items": [
       {
-        "name": "01_核心稿_Manuscript_v59.docx",
-        "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 新增 Fig.1 研究区地图, 全图重编号)",
-        "bytes": 3629488
+        "name": "01_核心稿_Manuscript_v60.docx",
+        "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 图表收口·新增 Fig.1 研究区地图, 全图重编号)",
+        "bytes": 3497045
       },
       {
         "name": "图_Graphical_Abstract.png",
         "desc": "图形摘要 · Graphical Abstract",
-        "bytes": 348557
+        "bytes": 323283
       },
       {
         "name": "图_Fig1_StudyArea_Map.png",
         "desc": "Fig 1 · 研究区与采样设计 (ELWNNR · Site A/B/C)",
-        "bytes": 209613
+        "bytes": 240320
       },
       {
         "name": "图_Fig2_AlphaDiversity.png",
         "desc": "Fig 2 · Alpha 多样性",
-        "bytes": 347389
+        "bytes": 336531
       },
       {
         "name": "图_Fig6_Network_Risk.png",
         "desc": "Fig 6 · 共现网络与风险分类 (66 节点 / 286 边)",
-        "bytes": 549743
+        "bytes": 501478
       },
       {
         "name": "图_Fig9_Actino_vs_Water.png",
         "desc": "Fig 9 · 放线菌门丰度 vs 土壤含水量",
-        "bytes": 172066
+        "bytes": 169467
       },
       {
         "name": "图_Fig10_CARD_Drought.png",
         "desc": "Fig 10 · CARD 药类耐药 vs 干旱梯度",
-        "bytes": 202015
+        "bytes": 188952
       },
       {
         "name": "表_TableS1_samples.csv",
