@@ -205,11 +205,11 @@ async function bootstrap() {
   renderFigures();          // 占位 + 后台解密 figures.enc(不阻塞进门)
   renderTables(CORE);
   initTableControls();
-  showTab("overview");
+  showTab("manuscript");
 }
 
 /* ---------- 标签切换 ---------- */
-const TABS = [["overview", "概览"], ["manuscript", "稿件全文"], ["figures", "图表"], ["tables", "表格"]];
+const TABS = [["manuscript", "全文 · 图文合一"], ["overview", "概览"], ["figures", "图库"], ["tables", "表格"]];
 function buildTabs() {
   document.getElementById("tabnav").innerHTML = TABS.map(([id, l]) =>
     `<button class="tab" data-tab="${id}">${l}</button>`).join("");
@@ -490,6 +490,64 @@ function headHTML(tag, cls, id, text) {
     `<button class="anchor" data-anchor="${id}" title="复制本节链接">¶</button></${tag}>`;
 }
 
+/* ===== 文图合一: 图件按正文首次引用位置内嵌到稿件流中 ===== */
+const FIG_ORDER = ["Graphical Abstract",
+  "Fig 1", "Fig 2", "Fig 3", "Fig 4", "Fig 5", "Fig 6", "Fig 7", "Fig 8", "Fig 9", "Fig 10",
+  "Fig S1", "Fig S2", "Fig S3"];
+/* 由图件 id 生成"正文引用"匹配正则: 兼容 Fig/Figure/图 + 可选点/空格 + 编号(含 S 前缀),
+   负向前瞻防止 Fig 1 命中 Fig 10。 */
+function figRefRe(figId) {
+  const m = String(figId).match(/Fig\s*(S?\d+)/i);
+  if (!m) return null;
+  const n = m[1].replace(/[.*+?^${}()|[\]\\]/g, "");
+  return new RegExp("(?:Fig(?:ure)?\\.?\\s*|图\\s*)" + n + "(?![0-9])", "i");
+}
+function firstFigRef(blocks, figId) {
+  const re = figRefRe(figId);
+  if (!re) return -1;
+  for (let i = 0; i < (blocks || []).length; i++) {
+    const b = blocks[i];
+    if (b.t === "table") continue;
+    if (b.text && re.test(b.text)) return i;
+  }
+  return -1;
+}
+/* 单语视图: 计算 blockIndex → [figId...] 的内嵌计划 + 未被引用的余项 */
+function inlineFigPlan(blocks) {
+  const plan = {}; const placed = new Set(); const leftover = [];
+  FIG_ORDER.forEach(figId => {
+    if (figId === "Graphical Abstract") return;
+    const idx = firstFigRef(blocks, figId);
+    if (idx >= 0) { (plan[idx] = plan[idx] || []).push(figId); placed.add(figId); }
+  });
+  FIG_ORDER.forEach(figId => {
+    if (figId !== "Graphical Abstract" && !placed.has(figId)) leftover.push(figId);
+  });
+  return { plan, leftover };
+}
+function figPlaceholderHTML(figId) {
+  return `<figure class="ms-fig loading" data-figid="${esc(figId)}">` +
+    `<div class="ms-fig-load">图 ${esc(figId)} · 本地解密载入中…</div></figure>`;
+}
+/* figures.enc 解密完成后, 用真实图像 + 图注填充稿件流中的占位符 */
+function fillInlineFigs() {
+  if (!FIGS) return;
+  const byId = {}; FIGS.forEach(f => { byId[f.id] = f; });
+  document.querySelectorAll("#manuscript .ms-fig.loading").forEach(ph => {
+    const f = byId[ph.dataset.figid];
+    if (!f) { ph.remove(); return; }
+    ph.innerHTML =
+      `<div class="ms-fig-imgwrap"><img loading="lazy" src="${f.img}" alt="${esc(f.id)}" /></div>` +
+      `<figcaption class="ms-figcap"><b>${esc(f.id)}</b>${f.title ? " — " + esc(f.title) : ""}` +
+      `${f.caption ? `<span class="ms-figcap-full">${esc(f.caption)}</span>` : ""}</figcaption>`;
+    ph.classList.remove("loading");
+    ph.addEventListener("click", e => {
+      if (e.target.closest(".ms-fig-imgwrap"))
+        openLightbox(f, `${f.id} — ${f.title}${f.caption ? "  ·  " + f.caption : ""}`);
+    });
+  });
+}
+
 function applyReadingPrefs() {
   const art = document.getElementById("manuscript");
   art.className = "doc fs-" + MS_FS + (MS_SERIF ? " serif" : "");
@@ -633,6 +691,8 @@ function renderManuscript() {
     if (!bi) { art.innerHTML = "<p class='ms-p'>无对照数据</p>"; return; }
     html += `<div class="bi-title"><div class="bi-t-en">${esc(bi.title_en)}</div>` +
       `<div class="bi-t-zh">${esc(bi.title_zh)}</div></div>`;
+    html += figPlaceholderHTML("Graphical Abstract");
+    const biPlaced = new Set();
     bi.sections.forEach((s, i) => {
       const id = "ms-sec-" + i;
       if (s.title_en || s.title_zh)
@@ -652,27 +712,50 @@ function renderManuscript() {
           <div class="bi-col bi-zh"><div class="bi-tools">${s.zh.length ? `<button class="bi-copy" data-sec="${i}" data-lang="zh">⧉ 复制中文</button>` : ""}</div>${zhBody}</div>
         </div>
       </section>`;
+      // 文图合一: 本节正文首次引用的图件, 全宽内嵌于本节之后
+      const figsHere = [];
+      FIG_ORDER.forEach(figId => {
+        if (figId === "Graphical Abstract" || biPlaced.has(figId)) return;
+        if (firstFigRef(s.en, figId) >= 0 || firstFigRef(s.zh, figId) >= 0) {
+          figsHere.push(figId); biPlaced.add(figId);
+        }
+      });
+      html += figsHere.map(figPlaceholderHTML).join("");
     });
-    meta.textContent = `中英对照 · ${bi.sections.length} 节 · 英文 ${erVer()} ↔ ${bi.zh_version}`;
+    const biLeft = FIG_ORDER.filter(f => f !== "Graphical Abstract" && !biPlaced.has(f));
+    if (biLeft.length)
+      html += `<h3 class="ms-h1" id="ms-figappx"><span class="hd-tx">其余图件 · Figures</span></h3>` +
+        biLeft.map(figPlaceholderHTML).join("");
+    meta.textContent = `中英对照 · 图文合一 · ${bi.sections.length} 节 · 英文 ${erVer()} ↔ ${bi.zh_version}`;
   } else {
     const src = MS_LANG === "zh" ? core.manuscript_zh : core.manuscript;
     if (!src) { art.innerHTML = "<p class='ms-p'>无数据</p>"; return; }
+    const { plan, leftover } = inlineFigPlan(src.blocks);
     src.blocks.forEach((b, i) => {
-      if (b.t === "title") { html += `<h1 class="ms-title">${esc(b.text)}</h1>`; return; }
+      if (b.t === "title") {
+        html += `<h1 class="ms-title">${esc(b.text)}</h1>` + figPlaceholderHTML("Graphical Abstract");
+        return;
+      }
+      let bh;
       if (b.t === "h1") {
         const id = "ms-h-" + i; tocItems.push({ id, lv: 1, text: b.text });
-        html += headHTML("h2", "ms-h1", id, b.text); return;
-      }
-      if (b.t === "h2") {
+        bh = headHTML("h2", "ms-h1", id, b.text);
+      } else if (b.t === "h2") {
         const id = "ms-h-" + i; tocItems.push({ id, lv: 2, text: b.text });
-        html += headHTML("h3", "ms-h2", id, b.text); return;
+        bh = headHTML("h3", "ms-h2", id, b.text);
+      } else if (b.t === "table") {
+        bh = tableHTML(b.rows[0], b.rows.slice(1));
+      } else {
+        bh = pHTML(b.text);
       }
-      if (b.t === "table") { html += tableHTML(b.rows[0], b.rows.slice(1)); return; }
-      html += pHTML(b.text);
+      html += bh + (plan[i] ? plan[i].map(figPlaceholderHTML).join("") : "");
     });
+    if (leftover.length)
+      html += `<h3 class="ms-h1" id="ms-figappx"><span class="hd-tx">其余图件 · Figures</span></h3>` +
+        leftover.map(figPlaceholderHTML).join("");
     meta.textContent = MS_LANG === "zh"
-      ? `${core.manuscript_zh.blocks.length} 块 · ${(core.bilingual || {}).zh_version || "中文工作版"}`
-      : `英文 ${erVer()} · ${core.manuscript.blocks.length} 块 · 生成于 ${core.generated_at}`;
+      ? `图文合一 · ${core.manuscript_zh.blocks.length} 块 · ${(core.bilingual || {}).zh_version || "中文工作版"}`
+      : `英文 ${erVer()} · 图文合一 · ${core.manuscript.blocks.length} 块 · 生成于 ${core.generated_at}`;
   }
 
   const _cn = verNum(core.version), _on = verNum(overviewErVer());
@@ -684,6 +767,9 @@ function renderManuscript() {
 
   art.innerHTML = html;
   applyReadingPrefs();
+  // 文图合一: 触发 figures.enc 懒解密并把图像回填到稿件流的占位符中
+  if (FIGS) fillInlineFigs();
+  else ensureFigures().then(fillInlineFigs).catch(() => {});
   { const sb = document.getElementById("ms-search"); if (sb && sb.value.trim()) applySearch(); }
 
   toc.innerHTML = tocItems.map(h =>
