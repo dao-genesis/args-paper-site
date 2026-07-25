@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-25 06:14 UTC",
+  "generated_at": "2026-07-25 07:29 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "ff52afe",
-    "date": "2026-07-25 05:12:29 +0000",
-    "subject": "网站: 文图合一 — 稿件流内嵌图件(按首次引用锚定)+图库保留"
+    "hash": "3141b74",
+    "date": "2026-07-25 06:16:34 +0000",
+    "subject": "图表: 从根层修复标签覆盖 (adjustText 自动避让 + 统计注记移出绘图区)"
   },
   "has_encrypted_core": true,
   "project": {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 90,
+      "files": 91,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
@@ -304,13 +304,13 @@
   "minpack": {
     "filename": "ARGs_成果最小包_v60.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 5170223,
-    "sha256": "067F33BA19B72A118E7BB1E23F8BE9FF3336F34F2D981CFD21DD14F64174759F",
+    "zip_bytes": 4980097,
+    "sha256": "2886443879E2087A4848F12B413F24EFD54A58FB5C606E17AF46FBF180FF3739",
     "items": [
       {
         "name": "01_核心稿_Manuscript_v60.docx",
         "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 图表收口·新增 Fig.1 研究区地图, 全图重编号)",
-        "bytes": 3519523
+        "bytes": 3376698
       },
       {
         "name": "图_Graphical_Abstract.png",
@@ -330,17 +330,17 @@
       {
         "name": "图_Fig6_Network_Risk.png",
         "desc": "Fig 6 · 共现网络与风险分类 (66 节点 / 286 边)",
-        "bytes": 501478
+        "bytes": 468345
       },
       {
         "name": "图_Fig9_Actino_vs_Water.png",
         "desc": "Fig 9 · 放线菌门丰度 vs 土壤含水量",
-        "bytes": 169467
+        "bytes": 160634
       },
       {
         "name": "图_Fig10_CARD_Drought.png",
         "desc": "Fig 10 · CARD 药类耐药 vs 干旱梯度",
-        "bytes": 186098
+        "bytes": 182812
       },
       {
         "name": "表_TableS1_samples.csv",
