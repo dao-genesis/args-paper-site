@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-25 07:29 UTC",
+  "generated_at": "2026-07-25 10:29 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "3141b74",
-    "date": "2026-07-25 06:16:34 +0000",
-    "subject": "图表: 从根层修复标签覆盖 (adjustText 自动避让 + 统计注记移出绘图区)"
+    "hash": "22a6e65",
+    "date": "2026-07-25 09:21:54 +0000",
+    "subject": "图表数据血缘根修: 出版图改用权威源(网络/火山/Mantel), 补数据血缘校验器"
   },
   "has_encrypted_core": true,
   "project": {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 91,
+      "files": 95,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
@@ -304,18 +304,18 @@
   "minpack": {
     "filename": "ARGs_成果最小包_v60.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 4980097,
-    "sha256": "2886443879E2087A4848F12B413F24EFD54A58FB5C606E17AF46FBF180FF3739",
+    "zip_bytes": 5197856,
+    "sha256": "7896B6BD9DE70D912ABFB3AD7FD9951C55B82E5D16325D21306BCFDC22F62D33",
     "items": [
       {
         "name": "01_核心稿_Manuscript_v60.docx",
         "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 图表收口·新增 Fig.1 研究区地图, 全图重编号)",
-        "bytes": 3376698
+        "bytes": 3512733
       },
       {
         "name": "图_Graphical_Abstract.png",
         "desc": "图形摘要 · Graphical Abstract",
-        "bytes": 323283
+        "bytes": 348557
       },
       {
         "name": "图_Fig1_StudyArea_Map.png",
@@ -325,22 +325,22 @@
       {
         "name": "图_Fig2_AlphaDiversity.png",
         "desc": "Fig 2 · Alpha 多样性",
-        "bytes": 345420
+        "bytes": 355623
       },
       {
         "name": "图_Fig6_Network_Risk.png",
         "desc": "Fig 6 · 共现网络与风险分类 (66 节点 / 286 边)",
-        "bytes": 468345
+        "bytes": 501322
       },
       {
         "name": "图_Fig9_Actino_vs_Water.png",
         "desc": "Fig 9 · 放线菌门丰度 vs 土壤含水量",
-        "bytes": 160634
+        "bytes": 164553
       },
       {
         "name": "图_Fig10_CARD_Drought.png",
         "desc": "Fig 10 · CARD 药类耐药 vs 干旱梯度",
-        "bytes": 182812
+        "bytes": 196071
       },
       {
         "name": "表_TableS1_samples.csv",
