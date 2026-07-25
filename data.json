@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-24 15:20 UTC",
+  "generated_at": "2026-07-25 06:14 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "77972a2",
-    "date": "2026-07-24 14:30:51 +0800",
-    "subject": "Merge PR #40: v59 网站补充表徽章去 D 系列字样"
+    "hash": "ff52afe",
+    "date": "2026-07-25 05:12:29 +0000",
+    "subject": "网站: 文图合一 — 稿件流内嵌图件(按首次引用锚定)+图库保留"
   },
   "has_encrypted_core": true,
   "project": {
@@ -212,7 +212,7 @@
       "title": "图表 · 出版级图件",
       "desc": "Fig.1–10 (Fig.1 研究区地图) + Graphical Abstract + SI 图，脚本化生成",
       "icon": "chart",
-      "files": 133,
+      "files": 135,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%89_%E5%9B%BE%E8%A1%A8_Figures"
     },
     {
@@ -228,7 +228,7 @@
       "title": "稿件 · 主稿与姐妹稿",
       "desc": "ER 主稿 v60(终稿·图表收口·新增 Fig.1 研究区地图·全图重编号) + SciData 姐妹稿 + 中文工作区",
       "icon": "doc",
-      "files": 203,
+      "files": 204,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
     },
     {
@@ -244,7 +244,7 @@
       "title": "投稿 · 打包与指南",
       "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
       "icon": "send",
-      "files": 36,
+      "files": 37,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
     },
     {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 74,
+      "files": 90,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
@@ -304,13 +304,13 @@
   "minpack": {
     "filename": "ARGs_成果最小包_v60.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 5141973,
-    "sha256": "1277E93517EBEB28CCAA0C097B4D086F11E6AF0D7D53FE60F793834D547E5EF7",
+    "zip_bytes": 5170223,
+    "sha256": "067F33BA19B72A118E7BB1E23F8BE9FF3336F34F2D981CFD21DD14F64174759F",
     "items": [
       {
         "name": "01_核心稿_Manuscript_v60.docx",
         "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 图表收口·新增 Fig.1 研究区地图, 全图重编号)",
-        "bytes": 3497045
+        "bytes": 3519523
       },
       {
         "name": "图_Graphical_Abstract.png",
@@ -325,7 +325,7 @@
       {
         "name": "图_Fig2_AlphaDiversity.png",
         "desc": "Fig 2 · Alpha 多样性",
-        "bytes": 336531
+        "bytes": 345420
       },
       {
         "name": "图_Fig6_Network_Risk.png",
@@ -340,7 +340,7 @@
       {
         "name": "图_Fig10_CARD_Drought.png",
         "desc": "Fig 10 · CARD 药类耐药 vs 干旱梯度",
-        "bytes": 188952
+        "bytes": 186098
       },
       {
         "name": "表_TableS1_samples.csv",
