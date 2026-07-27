@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-27 11:51 UTC",
+  "generated_at": "2026-07-27 12:01 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "e018125",
-    "date": "2026-07-27 09:09:18 +0000",
-    "subject": "feat(ER v61): 删 Results §3.2 悬垂交叉引用 + 重打包/重建加密站点/校验器全绿"
+    "hash": "f9f1291",
+    "date": "2026-07-27 19:54:19 +0800",
+    "subject": "Merge PR #49: 综合页 v61 一致性收口"
   },
   "has_encrypted_core": true,
   "project": {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 94,
+      "files": 95,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {

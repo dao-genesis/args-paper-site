@@ -8,6 +8,7 @@ const PBKDF2_ITERS = 200000;
 
 let CORE = null;   // 解密后的核心内容(稿件/表格; 不含图表)
 let OVERVIEW = null;
+let CB = "";        // 密文 URL 缓存破坏(?v=<commit>): 部署更新即换 URL 强制拉新, 同 commit 复用 304
 let PASS = null;   // 当前会话内存中的访问口令(仅用于按需解密成果最小包, 不落盘)
 let FIGS = null;         // 图表(懒加载, 来自 figures.enc)
 let FIGS_LOADING = null; // 图表解密中的 Promise(避免重复触发)
@@ -82,12 +83,12 @@ async function deriveKey(pass, salt) {
     { name: "PBKDF2", salt, iterations: PBKDF2_ITERS, hash: "SHA-256" },
     mat, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
 }
-/* 拉取二进制密文, 带下载进度回调; 走浏览器/CDN 缓存(去掉缓存破坏), 冷启只需一次全量, 之后走 304 秒开 */
+/* 拉取二进制密文, 带下载进度回调; URL 附 ?v=<commit> 缓存破坏, 部署更新即拉新, 同 commit 复用缓存(304 秒开) */
 async function fetchEncBytes(url, onProgress) {
   const ctl = new AbortController();
   const timer = setTimeout(() => ctl.abort(), 60000);   // 60s 硬超时, 杜绝永久卡"解密中"
   try {
-    const resp = await fetch(url, { signal: ctl.signal });     // cache:default → 可被 CDN/浏览器缓存
+    const resp = await fetch(url + CB, { signal: ctl.signal });  // 带 ?v=<commit> 缓存破坏: 内容随部署即时刷新, 未变则走 304
     if (!resp.ok) { const e = new Error("http " + resp.status); e.kind = "network"; throw e; }
     const total = +(resp.headers.get("content-length") || 0);
     if (!resp.body || !total) {                                // 无 stream/长度: 直接 arrayBuffer
@@ -196,7 +197,10 @@ document.getElementById("logout").addEventListener("click", () => {
 
 /* ---------- 引导 ---------- */
 async function bootstrap() {
-  try { OVERVIEW = await (await fetch("data.json")).json(); }
+  try {
+    OVERVIEW = await (await fetch("data.json", { cache: "no-store" })).json();  // 概览始终取最新, 杜绝陈旧缓存
+    CB = (OVERVIEW && OVERVIEW.git_head && OVERVIEW.git_head.hash) ? ("?v=" + OVERVIEW.git_head.hash) : "";
+  }
   catch (e) { OVERVIEW = null; }
   buildTabs();
   if (OVERVIEW) renderOverview(OVERVIEW);
