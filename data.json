@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-27 09:05 UTC",
+  "generated_at": "2026-07-27 11:51 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "3a9f553",
-    "date": "2026-07-27 07:08:49 +0000",
-    "subject": "docs: 补全两仓联动单一真源(站点架构说明)+README/索引/测试skill回指"
+    "hash": "e018125",
+    "date": "2026-07-27 09:09:18 +0000",
+    "subject": "feat(ER v61): 删 Results §3.2 悬垂交叉引用 + 重打包/重建加密站点/校验器全绿"
   },
   "has_encrypted_core": true,
   "project": {
@@ -22,7 +22,7 @@
       "package": "七_投稿_Submission/ER_Submission_v61_Final.zip",
       "version": "v61 (承 v60 结构 + 导师批注收口: 删 Results §3.2 悬垂内部交叉引用 '; see the risk-classification results below'; 无数据/统计值/结论/编号/表格/图数值改动)",
       "sha256": "C58AF98EDA641C1BB22EAD67933C5E9FA003D72FC602AF248237B127FD23096A",
-      "contents": "Manuscript_v61.docx (正文 Fig.1-10 [Fig.1=研究区地图] + SI S1-S3 内嵌=净化后 TNR 图; 文字/表/锁定数值与 v56 一致) + Cover Letter (ORCID) + Highlights (5) + references.bib; Figs 1-10 + GA (PDF + 300dpi TIFF); SuppFig S1-S3 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列); Pipeline_SRA_to_CARD",
+      "contents": "Manuscript_v61.docx (正文 Fig.1-10 [Fig.1=研究区地图] + SI S1-S3 内嵌=净化后 TNR 图; 图/表/锁定数值与 v60 字节一致, 正文仅删 §3.2 悬垂交叉引用) + Cover Letter (ORCID) + Highlights (5) + references.bib; Figs 1-10 + GA (PDF + 300dpi TIFF); SuppFig S1-S3 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列); Pipeline_SRA_to_CARD",
       "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v61_Final.zip"
     },
     "scidata": {
@@ -106,14 +106,14 @@
     {
       "key": "validate_zip",
       "name": "投稿包 SHA 校验 validate_zip",
-      "detail": "PASS exit 0 · 78 PASS / 0 WARN / 0 FAIL (against v60 package) · Highlights tigecycline 软建议已随 v60 收口清零",
+      "detail": "PASS exit 0 · 78 PASS / 0 WARN / 0 FAIL (against v61 package) · Highlights tigecycline 软建议已随 v60 收口清零",
       "status": "pass",
       "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_validate_zip.py"
     },
     {
       "key": "validate_submission_complete",
       "name": "投稿完整性 validate_submission_complete",
-      "detail": "NO-GO exit 2 · 93 PASS / 0 WARN / 1 FAIL · only F3 human blocker remains (against v60 package)",
+      "detail": "NO-GO exit 2 · 93 PASS / 0 WARN / 1 FAIL · only F3 human blocker remains (against v61 package)",
       "status": "blocked",
       "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_validate_submission_complete.py"
     },
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 90,
+      "files": 94,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {

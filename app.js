@@ -452,7 +452,7 @@ function renderMinpack(d) {
        <span class="mp-sz">${fmtSize(it.bytes)}</span></li>`).join("");
   box.innerHTML = `
     <div class="card mp-card">
-      <p class="mp-lead">快速审阅用最小成果集：核心稿 v60 + 关键图 + 关键表 + 核心数据。
+      <p class="mp-lead">快速审阅用最小成果集：核心稿 v61 + 关键图 + 关键表 + 核心数据。
         文件以访问口令 AES-256-GCM 加密，<b>浏览器内本地解密后</b>再下载为 ZIP —— 网址即便公开、无口令者也拿不到全文。</p>
       <ul class="mp-list">${rows}</ul>
       <div class="mp-foot">
