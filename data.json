@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-27 15:17 UTC",
+  "generated_at": "2026-07-28 02:29 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "568136e",
-    "date": "2026-07-27 12:01:30 +0000",
-    "subject": "fix(site): 概览永远取最新 + 密文按 commit 缓存破坏, 根除'看到旧版本'陈旧缓存"
+    "hash": "5898225",
+    "date": "2026-07-27 15:29:30 +0000",
+    "subject": "feat(v62): ER 格式合规 + 图件 10→7 收敛 (无科学值改动)"
   },
   "has_encrypted_core": true,
   "project": {
     "title": "Desert soil resistome stability masks Actinobacteria-linked compositional restructuring along a drought gradient",
     "primary_track": "Environmental Research",
     "secondary_track": "Scientific Data",
-    "phase": "ER 权威稿已收口为 v62（承 v61 科学内容不变，格式合规+图件收敛: 主图 10→7（旧 Fig5 热图/Fig7 方差分解/Fig8 Mantel 降为 SI Fig.S4-S6；旧 Fig6→Fig5/旧 Fig9→Fig6/旧 Fig10→Fig7），SI 图扩为 S1-S6；正文双倍行距；残留 eastAsia=宋体 run 标记归 Times New Roman；投稿 TIFF 由 RGBA 扁平化为 RGB 无 alpha（像素无损/300dpi/LZW）；Table S7 去重（PERMANOVA 表为唯一 Table S7，PCoA 坐标矩阵改名源数据）；build_v62.py + _pack_ER_zip_v62.py 落地；投稿包 v62 新 SHA 2E3CBCA6…）；v61（承 v60，导师批注收口: 删除 Results §3.2 悬垂内部交叉引用 '(q = 0.090); see the risk-classification results below.'→'(q = 0.090).'，无任何数据/统计/图/表/图注/编号改动，图数仍 10 主+3 SI，全部图栅格与 v60 字节一致；build_v61.py 落地；投稿包 v61 新 SHA C58AF98E…）；v61 之前 v60 图表出版质量收口: 清除全部出版图内部 QA/交叉校验脚手架文字[AUDIT_CROSSCHECK/R·vegan/adonis2/rel-abund/'this study:'双计数/ns-FDR]、网络图不再打印与权威值冲突的 Python 重建计数[权威 66节点/286边/Q=0.159 仅存于图注与 GA]、修复研究区地图 A/B/C 叠标(改磁化 transect 内插图)+PCoA 环境矢量标签与 PERMANOVA 框压点+Alpha Chao1 注记+热图副标题拥挤; 仅图内文字/排版变动, 无任何数据/统计/结论/编号/表格/图注改动, 图数仍 10 主+3 SI; Manuscript_v60.docx 由 v59 仅换净化栅格重嵌, build_v60.py 落地）；反向审计 2026-07-25d 正文/统计文本层收口：Table3 多因子 PERMANOVA Total Df 43→42（对齐权威 R adonis2 输出 R_validation_report.txt 第66行 Total 42=n-1）、摘要 em-dash 插语修复、Discussion 4.1 悬垂句重写（Fazal et al., 2025）；图件/拓扑/统计值/结论/编号全不变；投稿包 v60 SHA 2E7280D1…（承 2026-07-25c 出版布局深修：网络模块环形排布/PCoA 矢量扇形错位/α删冗余 Chao1 面板/FigS4 指示种依 Methods IndVal>40&P<0.05 判据/风险饼与网络条 Rank I 引线注记；拓扑 66/286/Q=0.159、统计、锁定值、编号、表格全不变）；校验器闭合(font 14/reverse 56/deep 73/cross 60/lineage 18/zip 78/complete 93 除 F3)；唯余 F3 人类门（第一作者 ORCID 核实、5 位审稿人邮箱+COI、APC/提交系统）",
-    "verified_at": "2026-07-25"
+    "phase": "ER 权威稿已收口为 v63（承 v62 全部图/表/锁定科学值/统计/结论/图栅格像素不变，仅稿件文字层：删除 Results §3.4 两处残留 reference 式年份 token『CARD (2023)』『the 2009 ARDB annotation』→『CARD』『the legacy ARDB annotation』，落实导师『结果里不留隐身参考文献』；build_v63.py 断言恰 2 处命中、Results 年份 token 归零；_pack_ER_zip_v63.py 落地；投稿包 v63 新 SHA A32D1C60…）；此前 v62（承 v61 科学内容不变，格式合规+图件收敛: 主图 10→7（旧 Fig5 热图/Fig7 方差分解/Fig8 Mantel 降为 SI Fig.S4-S6；旧 Fig6→Fig5/旧 Fig9→Fig6/旧 Fig10→Fig7），SI 图扩为 S1-S6；正文双倍行距；残留 eastAsia=宋体 run 标记归 Times New Roman；投稿 TIFF 由 RGBA 扁平化为 RGB 无 alpha（像素无损/300dpi/LZW）；Table S7 去重（PERMANOVA 表为唯一 Table S7，PCoA 坐标矩阵改名源数据）；build_v62.py + _pack_ER_zip_v62.py 落地；投稿包 v62 新 SHA 2E3CBCA6…）；v61（承 v60，导师批注收口: 删除 Results §3.2 悬垂内部交叉引用 '(q = 0.090); see the risk-classification results below.'→'(q = 0.090).'，无任何数据/统计/图/表/图注/编号改动，图数仍 10 主+3 SI，全部图栅格与 v60 字节一致；build_v61.py 落地；投稿包 v61 新 SHA C58AF98E…）；v61 之前 v60 图表出版质量收口: 清除全部出版图内部 QA/交叉校验脚手架文字[AUDIT_CROSSCHECK/R·vegan/adonis2/rel-abund/'this study:'双计数/ns-FDR]、网络图不再打印与权威值冲突的 Python 重建计数[权威 66节点/286边/Q=0.159 仅存于图注与 GA]、修复研究区地图 A/B/C 叠标(改磁化 transect 内插图)+PCoA 环境矢量标签与 PERMANOVA 框压点+Alpha Chao1 注记+热图副标题拥挤; 仅图内文字/排版变动, 无任何数据/统计/结论/编号/表格/图注改动, 图数仍 10 主+3 SI; Manuscript_v60.docx 由 v59 仅换净化栅格重嵌, build_v60.py 落地）；反向审计 2026-07-25d 正文/统计文本层收口：Table3 多因子 PERMANOVA Total Df 43→42（对齐权威 R adonis2 输出 R_validation_report.txt 第66行 Total 42=n-1）、摘要 em-dash 插语修复、Discussion 4.1 悬垂句重写（Fazal et al., 2025）；图件/拓扑/统计值/结论/编号全不变；投稿包 v60 SHA 2E7280D1…（承 2026-07-25c 出版布局深修：网络模块环形排布/PCoA 矢量扇形错位/α删冗余 Chao1 面板/FigS4 指示种依 Methods IndVal>40&P<0.05 判据/风险饼与网络条 Rank I 引线注记；拓扑 66/286/Q=0.159、统计、锁定值、编号、表格全不变）；校验器闭合(font 14/reverse 56/deep 73/cross 60/lineage 18/zip 78/complete 93 除 F3)；唯余 F3 人类门（第一作者 ORCID 核实、5 位审稿人邮箱+COI、APC/提交系统）",
+    "verified_at": "2026-07-28"
   },
   "submission": {
     "er": {
       "status": "machine_ready_human_confirmation_required",
-      "package": "七_投稿_Submission/ER_Submission_v62_Final.zip",
-      "version": "v62 (承 v61 科学内容 + 格式合规/图件收敛: 主图 10→7·旧 Fig5/7/8 降为 SI Fig.S4-S6·SI 扩 S1-S6·全图重编号; 正文双倍行距; eastAsia=宋体→TNR; TIFF RGBA→RGB 无 alpha 像素无损; Table S7 去重; 无任何数据/统计值/结论/图栅格像素改动)",
-      "sha256": "2E3CBCA613FBD41CF8F1743C6F06FEF018B194349E2EA1AE6BC524A5F80CB04A",
-      "contents": "Manuscript_v62.docx (正文 Fig.1-7 [Fig.1=研究区地图] + SI S1-S6 内嵌=真 TNR 图; 双倍行距; 图/表/锁定数值承 v61 不变, 仅图号重编+格式洁净) + Cover Letter (ORCID) + Highlights (5) + references.bib; Figs 1-7 + GA (PDF + 300dpi RGB TIFF); SuppFig S1-S6 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列, S7 去重) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD",
-      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v62_Final.zip"
+      "package": "七_投稿_Submission/ER_Submission_v63_Final.zip",
+      "version": "v63 (承 v62 图/表/统计/结论不变, 仅删 Results §3.4 两处隐身年份引用; 承 v61 科学内容 + 格式合规/图件收敛: 主图 10→7·旧 Fig5/7/8 降为 SI Fig.S4-S6·SI 扩 S1-S6·全图重编号; 正文双倍行距; eastAsia=宋体→TNR; TIFF RGBA→RGB 无 alpha 像素无损; Table S7 去重; 无任何数据/统计值/结论/图栅格像素改动)",
+      "sha256": "A32D1C60DCA7F8002955B256946595F1C81A10405A5AA1970095BC0D7E165D26",
+      "contents": "Manuscript_v63.docx (正文 Fig.1-7 [Fig.1=研究区地图] + SI S1-S6 内嵌=真 TNR 图; 双倍行距; 图/表/锁定数值承 v61 不变, 仅图号重编+格式洁净) + Cover Letter (ORCID) + Highlights (5) + references.bib; Figs 1-7 + GA (PDF + 300dpi RGB TIFF); SuppFig S1-S6 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列, S7 去重) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD",
+      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v63_Final.zip"
     },
     "scidata": {
       "status": "defer_until_er_or_data_doi_ready",
@@ -106,14 +106,14 @@
     {
       "key": "validate_zip",
       "name": "投稿包 SHA 校验 validate_zip",
-      "detail": "PASS exit 0 · 78 PASS / 0 WARN / 0 FAIL (against v62 package) · Highlights tigecycline 软建议已随 v60 收口清零",
+      "detail": "PASS exit 0 · 78 PASS / 0 WARN / 0 FAIL (against v63 package) · Highlights tigecycline 软建议已随 v60 收口清零",
       "status": "pass",
       "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_validate_zip.py"
     },
     {
       "key": "validate_submission_complete",
       "name": "投稿完整性 validate_submission_complete",
-      "detail": "NO-GO exit 2 · 93 PASS / 0 WARN / 1 FAIL · only F3 human blocker remains (against v62 package)",
+      "detail": "NO-GO exit 2 · 93 PASS / 0 WARN / 1 FAIL · only F3 human blocker remains (against v63 package)",
       "status": "blocked",
       "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_validate_submission_complete.py"
     },
@@ -226,9 +226,9 @@
     {
       "dir": "五_稿件_Manuscripts",
       "title": "稿件 · 主稿与姐妹稿",
-      "desc": "ER 主稿 v62(终稿·图件 10→7 收敛·旧 Fig5/7/8 降为 SI·全图重编号·双倍行距·字体标记洁净) + SciData 姐妹稿 + 中文工作区",
+      "desc": "ER 主稿 v63(终稿·承 v62 仅删 Results 隐身年份引用·图件 10→7 收敛·旧 Fig5/7/8 降为 SI·全图重编号·双倍行距·字体标记洁净) + SciData 姐妹稿 + 中文工作区",
       "icon": "doc",
-      "files": 207,
+      "files": 209,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
     },
     {
@@ -244,7 +244,7 @@
       "title": "投稿 · 打包与指南",
       "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
       "icon": "send",
-      "files": 40,
+      "files": 42,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
     },
     {
@@ -266,14 +266,14 @@
   ],
   "downloads": [
     {
-      "name": "ER 投稿包 (v62 Final ZIP)",
-      "path": "七_投稿_Submission/ER_Submission_v62_Final.zip",
-      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v62_Final.zip"
+      "name": "ER 投稿包 (v63 Final ZIP)",
+      "path": "七_投稿_Submission/ER_Submission_v63_Final.zip",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v63_Final.zip"
     },
     {
-      "name": "ER 主稿 Manuscript v62 (docx)",
-      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v62.docx",
-      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v62.docx"
+      "name": "ER 主稿 Manuscript v63 (docx)",
+      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v63.docx",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v63.docx"
     },
     {
       "name": "反向审视报告 (2026-07-02)",
@@ -302,15 +302,15 @@
     }
   ],
   "minpack": {
-    "filename": "ARGs_成果最小包_v62.zip",
+    "filename": "ARGs_成果最小包_v63.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 5086647,
-    "sha256": "17500FE18B0895CA7E6A8AD4228E860ECBCCE16B5695656A98979BC8EDBD88BF",
+    "zip_bytes": 5086642,
+    "sha256": "7D29088CE177B56E2F6718AD7B185F430B1BD92348D99EA1DC42CE0BC6E83465",
     "items": [
       {
-        "name": "01_核心稿_Manuscript_v62.docx",
+        "name": "01_核心稿_Manuscript_v63.docx",
         "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 图件 10→7 收敛·旧 Fig5/7/8 降为 SI·全图重编号·双倍行距)",
-        "bytes": 3407628
+        "bytes": 3407624
       },
       {
         "name": "图_Graphical_Abstract.png",
