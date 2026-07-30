@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-30 12:29 UTC",
+  "generated_at": "2026-07-30 13:05 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "82481dc",
-    "date": "2026-07-30 11:14:53 +0000",
-    "subject": "导师审阅包可读性收口: 稿件PDF(真TNR) + 亮点docx + 补充表三线表docx + 图集 (#54)"
+    "hash": "d597406",
+    "date": "2026-07-30 13:05:11 +0000",
+    "subject": "state: 记录 v64 分发与备份闭环 (合并/Release/公开站点同步/VPS-R2) (#56)"
   },
   "has_encrypted_core": true,
   "project": {
