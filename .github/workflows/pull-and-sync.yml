@@ -55,6 +55,11 @@ jobs:
             echo "站点产物无变化, 跳过提交。"
           else
             git commit -m "sync: 从私有主仓 docs/ 拉取并发布站点产物 ($(date -u +%FT%TZ))"
-            git push
-            echo "已发布最新站点产物到 main。"
+            # 有人同时改本仓(如 README)会导致 non-fast-forward; 站点产物以主仓为准, 故 rebase 后重试。
+            for i in 1 2 3; do
+              git push && { echo "已发布最新站点产物到 main。"; exit 0; }
+              echo "::warning::push 被拒(并发提交), 第 $i 次 rebase 重试"
+              git pull --rebase --autostash origin main
+            done
+            echo "::error::push 连续失败"; exit 1
           fi
