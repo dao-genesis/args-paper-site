@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-30 13:05 UTC",
+  "generated_at": "2026-07-30 13:25 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "d597406",
-    "date": "2026-07-30 13:05:11 +0000",
-    "subject": "state: 记录 v64 分发与备份闭环 (合并/Release/公开站点同步/VPS-R2) (#56)"
+    "hash": "ac67ec6",
+    "date": "2026-07-30 13:23:39 +0000",
+    "subject": "fix(site): 最小包导语的稿件版本改由清单派生 (曾硬编码 v61) (#58)"
   },
   "has_encrypted_core": true,
   "project": {
