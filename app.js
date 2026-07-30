@@ -444,6 +444,14 @@ async function downloadMinpack(mp) {
     btn.disabled = false; btn.textContent = label;
   }
 }
+// 稿件版本号只认清单里的实际文件名 (曾硬编码 v61, 随稿件升版而失真)。
+function mpManuscriptVer(mp) {
+  for (const it of mp.items || []) {
+    const m = /Manuscript_v(\d+)\.docx$/i.exec(it.name || "");
+    if (m) return "v" + m[1];
+  }
+  return "最新版";
+}
 function renderMinpack(d) {
   const box = document.getElementById("minpack");
   const sec = document.getElementById("sec-minpack");
@@ -456,7 +464,7 @@ function renderMinpack(d) {
        <span class="mp-sz">${fmtSize(it.bytes)}</span></li>`).join("");
   box.innerHTML = `
     <div class="card mp-card">
-      <p class="mp-lead">快速审阅用最小成果集：核心稿 v61 + 关键图 + 关键表 + 核心数据。
+      <p class="mp-lead">快速审阅用最小成果集：核心稿 ${esc(mpManuscriptVer(mp))} + 关键图 + 关键表 + 核心数据。
         文件以访问口令 AES-256-GCM 加密，<b>浏览器内本地解密后</b>再下载为 ZIP —— 网址即便公开、无口令者也拿不到全文。</p>
       <ul class="mp-list">${rows}</ul>
       <div class="mp-foot">
