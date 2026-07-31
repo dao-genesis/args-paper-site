@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-07-31 10:27 UTC",
+  "generated_at": "2026-07-31 12:18 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "6726dd4",
-    "date": "2026-07-31 06:32:04 +0000",
-    "subject": "deliver: 反向对账后补回图形摘要与亮点 (四件 -> 六件)"
+    "hash": "c2157f9",
+    "date": "2026-07-31 12:14:49 +0000",
+    "subject": "v65.1: L4 权威层与姊妹稿口径回收 · 指纹表由装饰改为机器核对 (#66)"
   },
   "has_encrypted_core": true,
   "project": {
     "title": "Desert soil resistome stability masks Actinobacteria-linked compositional restructuring along a drought gradient",
     "primary_track": "Environmental Research",
     "secondary_track": "Scientific Data",
-    "phase": "ER 投稿包已收口为 v65（多视角审计 P0–P3 全条闭合；含一处实质科学订正：v63/v64 的 Table S8 与 Results §3.6 取自 L2_L3/01_abundance_class_rel.csv，而仓内 网络复现_from_raw/README.md 早已判定该矩阵对稀有 ARG 类做过上游预加权、复现 847 边而非权威 286 边，属被否定的输入；Fig. 5B/S2 更是 mild/severe 用权威矩阵、moderate 用旧矩阵，三处混用。现全部回到 L4 权威逐 ORF 矩阵（319,005 ORFs，列和=1，79 类全有 Risk_Rank，EC/EC_ARG 别名归一）重算：Rank I 2.27→1.90% H=5.56 P=0.062 方向性不显著（原稿误作 P=0.019 显著）、Rank II 19.51→21.23% H=7.19 P=0.027 显著上升（原稿误作 ns）、Rank III 78.22→76.87% H=8.38 P=0.015 显著下降（原稿误作 ns）；macrolide 敏感性情景 B 下 Rank II 转边缘 P=0.055、Rank III 转不显著 P=0.217，摘要/亮点原本即用 trend 措辞，『总量稳定、组成重构』主结论不变。其余闭合：删风险饼图（与 Fig. 5B 同数据同印字的重复图，落导师『S2 直接删了不要了』），原 S3–S6 顺延为 S2–S5，稿件内嵌图 13→12；Highlights 首条 86→83 字符（Elsevier 上限 85）；图上拼音列码 SHA/FEN/NIAN/VL/VA 显示为 Sand/Silt/Clay/BD/Porosity；Table 4 增列 Partial r / Partial P 使摘要 r=0.343 可溯；Fig. S5 偏 Mantel 柱由硬编码 5 个变量补全为除对照变量 SWC 外全部变量；补 MDR/ARDB 复合码（AMA/AGMBA/ATFBT/GFRE/CF/ITA）定义与处置说明；Results 补引 Fig. 1 / Table S1 / Table S7；图形摘要中栏标题回到面板内、底栏统计条放大到 500 px 宽仍可读、Rank I 明标 ns P=0.062；投稿信日期 May 20→July 30, 2026 且 Rank I 措辞改为方向性；图/表编号收敛为唯一事实源 七_投稿_Submission/_figure_map.py，打包器/图集/站点/校验器共用，并新增 八_验证_Validation/_validate_numbering.py 钉死『正文引用编号 ↔ 映射件数 ↔ ZIP arcname ↔ 内嵌图张数』四方一致；同轮修掉两处『校验器自身锁死过期事实』的反模式：_validate_zip.py 与 _validate_submission_complete.py 曾把投稿信日期 May 20, 2026 钉成必需字面量，正是它把过期日期锁在稿里，现改为只校验信头日期格式）；投稿包 v65 SHA 68E156E9…（55 件，v64 为 58 件，差额即删掉的风险饼图 PDF/PNG/TIFF 三件）；唯余 F3 人类门（第一作者 ORCID、5 位审稿人邮箱+COI、APC/提交系统）",
+    "phase": "v65.1（2026-07-31 补）：v65 收口后回头核对被引用面，修掉三处只影响可信度、不影响交付面的断层 —— L4 AUTHORITY_MANIFEST §九 仍登记被否定的 Rank I P=0.019/0.157/0.039（根因是 D15 脚本改读权威矩阵后没回写自己的 L4 落点，现一次计算写三处、逐字节相同）、§十一 的 14 行 MD5 指纹自 05-28 起从未被机器核对且已漂移 5 行（按实测重填并由 _verify_authoritative_lineage.py 新增「L4 权威层自洽」逐行钉死）、SciData 姊妹稿与 F4 亲笔脚手架仍在传播旧统计（已订正并重打 SciData zip 05FFC3A5…）；该校验器原把稿件硬编码为 v60，改为自适应最新稿。稿件/图/ER 包/交付包无改动。承前：ER 投稿包已收口为 v65（多视角审计 P0–P3 全条闭合；含一处实质科学订正：v63/v64 的 Table S8 与 Results §3.6 取自 L2_L3/01_abundance_class_rel.csv，而仓内 网络复现_from_raw/README.md 早已判定该矩阵对稀有 ARG 类做过上游预加权、复现 847 边而非权威 286 边，属被否定的输入；Fig. 5B/S2 更是 mild/severe 用权威矩阵、moderate 用旧矩阵，三处混用。现全部回到 L4 权威逐 ORF 矩阵（319,005 ORFs，列和=1，79 类全有 Risk_Rank，EC/EC_ARG 别名归一）重算：Rank I 2.27→1.90% H=5.56 P=0.062 方向性不显著（原稿误作 P=0.019 显著）、Rank II 19.51→21.23% H=7.19 P=0.027 显著上升（原稿误作 ns）、Rank III 78.22→76.87% H=8.38 P=0.015 显著下降（原稿误作 ns）；macrolide 敏感性情景 B 下 Rank II 转边缘 P=0.055、Rank III 转不显著 P=0.217，摘要/亮点原本即用 trend 措辞，『总量稳定、组成重构』主结论不变。其余闭合：删风险饼图（与 Fig. 5B 同数据同印字的重复图，落导师『S2 直接删了不要了』），原 S3–S6 顺延为 S2–S5，稿件内嵌图 13→12；Highlights 首条 86→83 字符（Elsevier 上限 85）；图上拼音列码 SHA/FEN/NIAN/VL/VA 显示为 Sand/Silt/Clay/BD/Porosity；Table 4 增列 Partial r / Partial P 使摘要 r=0.343 可溯；Fig. S5 偏 Mantel 柱由硬编码 5 个变量补全为除对照变量 SWC 外全部变量；补 MDR/ARDB 复合码（AMA/AGMBA/ATFBT/GFRE/CF/ITA）定义与处置说明；Results 补引 Fig. 1 / Table S1 / Table S7；图形摘要中栏标题回到面板内、底栏统计条放大到 500 px 宽仍可读、Rank I 明标 ns P=0.062；投稿信日期 May 20→July 30, 2026 且 Rank I 措辞改为方向性；图/表编号收敛为唯一事实源 七_投稿_Submission/_figure_map.py，打包器/图集/站点/校验器共用，并新增 八_验证_Validation/_validate_numbering.py 钉死『正文引用编号 ↔ 映射件数 ↔ ZIP arcname ↔ 内嵌图张数』四方一致；同轮修掉两处『校验器自身锁死过期事实』的反模式：_validate_zip.py 与 _validate_submission_complete.py 曾把投稿信日期 May 20, 2026 钉成必需字面量，正是它把过期日期锁在稿里，现改为只校验信头日期格式）；投稿包 v65 SHA 68E156E9…（55 件，v64 为 58 件，差额即删掉的风险饼图 PDF/PNG/TIFF 三件）；唯余 F3 人类门（第一作者 ORCID、5 位审稿人邮箱+COI、APC/提交系统）",
     "verified_at": "2026-07-31"
   },
   "submission": {
     "er": {
       "status": "machine_ready_human_confirmation_required",
       "package": "七_投稿_Submission/ER_Submission_v65_Final.zip",
-      "version": "v64 (承 v63 稿件/表/统计/结论/其余 13 图逐字节不变, 仅图形摘要标题与稿件题名统一; 承 v62 图/表/统计/结论不变, 仅删 Results §3.4 两处隐身年份引用; 承 v61 科学内容 + 格式合规/图件收敛: 主图 10→7·旧 Fig5/7/8 降为 SI Fig.S4-S6·SI 扩 S1-S6·全图重编号; 正文双倍行距; eastAsia=宋体→TNR; TIFF RGBA→RGB 无 alpha 像素无损; Table S7 去重; 无任何数据/统计值/结论/图栅格像素改动)",
+      "version": "v65 (承 v64/v63 全部形式修订, 本轮唯一实质科学订正: 风险等级统计由 L2_L3/01_abundance_class_rel.csv 改回 L4 权威逐 ORF 矩阵重算 —— Rank I 2.27→1.90% P=0.062 方向性不显著 (原稿误作 P=0.019 显著)、Rank II P=0.027 显著上升、Rank III P=0.015 显著下降; 并删风险饼图、SI 图号 S3–S6 顺延为 S2–S5、内嵌图 13→12、Highlights 首条 86→83 字符、图上拼音列码显示为 Sand/Silt/Clay/BD/Porosity、Table 4 增列 Partial r/P、编号收敛为 _figure_map.py 唯一事实源)",
       "sha256": "68E156E9EF1AE384A9002DD44C043761F91159C67DA592C66AC0CF7F9E43F068",
       "contents": "Manuscript_v65.docx (正文 Fig.1-7 [Fig.1=研究区地图] + SI S1-S5 内嵌 = 真 TNR 图, 共 12 张; 双倍行距) + Cover Letter + Highlights (5 条, 最长 83 字符) + references.bib; Figs 1-7 + GA (PDF + 300dpi RGB 无 alpha TIFF); SuppFig S1-S5 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列, S7 去重) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD。共 55 件。",
       "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v65_Final.zip"
@@ -244,7 +244,7 @@
       "title": "投稿 · 打包与指南",
       "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
       "icon": "send",
-      "files": 62,
+      "files": 59,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
     },
     {
@@ -304,8 +304,8 @@
   "minpack": {
     "filename": "ARGs_成果最小包_v65.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 14750237,
-    "sha256": "1D6C9D29972CF6857D8A8CAAA46481CB712AF9BB33C1D4F6EBBA7FEBE640DA9D",
+    "zip_bytes": 14750238,
+    "sha256": "516899AFB7782DF6D7D4A90FA0303EC8EC023D3024978C02E59ECEC4A95FC93A",
     "items": [
       {
         "name": "01_核心稿_Manuscript_v65.docx",
