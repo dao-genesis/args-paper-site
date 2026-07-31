@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-31 15:04 UTC",
+  "generated_at": "2026-07-31 15:14 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "a6474b5",
-    "date": "2026-07-31 12:28:24 +0000",
-    "subject": "site: 最小包缺件由静默跳过改为致命错误 (#68)"
+    "hash": "8590364",
+    "date": "2026-07-31 15:06:14 +0000",
+    "subject": "v66: 审稿人视角反读加固 —— 深度归一 (Table S9) · 干旱×站点共线 (Table S10) · 读段级可移动性筛查 (Table S11/Fig. S6)"
   },
   "has_encrypted_core": true,
   "project": {
@@ -204,7 +204,7 @@
       "title": "分析 · 可复现管线",
       "desc": "R/vegan + Python 全链路复归、敏感性分析、E2E 校验",
       "icon": "flask",
-      "files": 46,
+      "files": 80,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%8C_%E5%88%86%E6%9E%90_Analysis"
     },
     {
@@ -212,7 +212,7 @@
       "title": "图表 · 出版级图件",
       "desc": "Fig.1–7 (Fig.1 研究区地图) + Graphical Abstract + SI 图 S1–S6，脚本化生成·300dpi 扫平 TIFF",
       "icon": "chart",
-      "files": 136,
+      "files": 143,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%89_%E5%9B%BE%E8%A1%A8_Figures"
     },
     {
@@ -228,7 +228,7 @@
       "title": "稿件 · 主稿与姐妹稿",
       "desc": "ER 主稿 v66(审稿人视角反读加固·测序深度归一稳健性 Table S9·干旱与站点完全共线声明 Table S10·因果措辞全稿降级为关联) + SciData 姐妹稿 + 中文工作区",
       "icon": "doc",
-      "files": 216,
+      "files": 270,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
     },
     {
@@ -244,7 +244,7 @@
       "title": "投稿 · 打包与指南",
       "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
       "icon": "send",
-      "files": 69,
+      "files": 91,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
     },
     {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 105,
+      "files": 131,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
