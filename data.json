@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-31 15:14 UTC",
+  "generated_at": "2026-07-31 16:30 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "8590364",
-    "date": "2026-07-31 15:06:14 +0000",
-    "subject": "v66: 审稿人视角反读加固 —— 深度归一 (Table S9) · 干旱×站点共线 (Table S10) · 读段级可移动性筛查 (Table S11/Fig. S6)"
+    "hash": "829efbf",
+    "date": "2026-07-31 15:20:46 +0000",
+    "subject": "site: 站点版本与包 SHA 由 v65 补齐为 v66 (#71)"
   },
   "has_encrypted_core": true,
   "project": {
@@ -20,8 +20,8 @@
     "er": {
       "status": "machine_ready_human_confirmation_required",
       "package": "七_投稿_Submission/ER_Submission_v66_Final.zip",
-      "version": "v66 (承 v65 全部订正, 本轮为三项新增证据: Table S9 深度归一 [原始计数与文库 rho=0.774, 每 Gb KW P=0.038 但对干旱秩 rho=+0.077 P=0.625 呈 U 形 → 全稿 stability 改写为无单调趋势]; Table S10 干旱×站点完全共线 [n_site=3, 站点置换退化 exact P=1.000, 最小可达 P=1/6 → 因果措辞全稿降级为关联]; Table S11 + Fig. S6 读段级可移动性标记筛查 [总量沿干旱无趋势 q=0.852、与 ARG ORFs/Gb 无关 rho=-0.034、仅 relaxase 上升 q=0.038; 读段级关联而非 contig 级邻接]。61 件, SHA256 43C225E8…)",
-      "sha256": "43C225E81E9DABD0DA471C462B279EEA3630AD479FEA967A605CB02583059832",
+      "version": "v66 (承 v65 全部订正, 本轮为三项新增证据: Table S9 深度归一 [原始计数与文库 rho=0.774, 每 Gb KW P=0.038 但对干旱秩 rho=+0.077 P=0.625 呈 U 形 → 全稿 stability 改写为无单调趋势]; Table S10 干旱×站点完全共线 [n_site=3, 站点置换退化 exact P=1.000, 最小可达 P=1/6 → 因果措辞全稿降级为关联]; Table S11 + Fig. S6 读段级可移动性标记筛查 [总量沿干旱无趋势 q=0.852、与 ARG ORFs/Gb 无关 rho=-0.034、仅 relaxase 上升 q=0.038; 读段级关联而非 contig 级邻接]。另含排版归位: Fig. S5/S6 与其标签错位纠正 (实质错误)、图区手插分页符与 2 张整页空白清除 (稿件 PDF 57→52 页)、Table 4 由 655 pt 越版心收回 468 pt 版心、四表单倍行距与表头跨页重复, 新增 _validate_layout.py 钉死。61 件, SHA256 14D0C877…)",
+      "sha256": "14D0C87733781D667437445553296EE8F4D12FA973EFC789187BD197AC71069D",
       "contents": "Manuscript_v66.docx (正文 Fig.1-7 [Fig.1=研究区地图] + SI S1-S6 内嵌 = 真 TNR 图, 共 13 张; 双倍行距) + Cover Letter + Highlights (5 条, 最长 83 字符) + references.bib; Figs 1-7 + GA (PDF + 300dpi RGB 无 alpha TIFF); SuppFig S1-S6 (PDF+PNG+TIFF); Supplementary Tables S1-S11 (统一 S 系列) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD。共 61 件。",
       "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v66_Final.zip"
     },
@@ -228,7 +228,7 @@
       "title": "稿件 · 主稿与姐妹稿",
       "desc": "ER 主稿 v66(审稿人视角反读加固·测序深度归一稳健性 Table S9·干旱与站点完全共线声明 Table S10·因果措辞全稿降级为关联) + SciData 姐妹稿 + 中文工作区",
       "icon": "doc",
-      "files": 270,
+      "files": 271,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
     },
     {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 131,
+      "files": 133,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
@@ -304,18 +304,18 @@
   "minpack": {
     "filename": "ARGs_成果最小包_v66.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 15234528,
-    "sha256": "69527B9F281801C0721DA3D37D1E52190C3C186F47162032FD52AACB28162382",
+    "zip_bytes": 15233802,
+    "sha256": "4E694E2075EDAE1F4EEFE5D1A62CC9BB28EF3585552865474C1F87E6FCDF191E",
     "items": [
       {
         "name": "01_核心稿_Manuscript_v66.docx",
         "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 图件 10→7 收敛·旧 Fig5/7/8 降为 SI·全图重编号·双倍行距)",
-        "bytes": 3668189
+        "bytes": 3668670
       },
       {
         "name": "02_核心稿_Manuscript_v66.pdf",
         "desc": "核心稿件 PDF · 内嵌真 Times New Roman (无 Word 也能直读·与 docx 同源)",
-        "bytes": 2882830
+        "bytes": 2880390
       },
       {
         "name": "03_补充表_Supplementary_Tables_S1-S11.docx",
