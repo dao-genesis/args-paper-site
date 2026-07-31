@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-30 13:25 UTC",
+  "generated_at": "2026-07-31 10:27 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "ac67ec6",
-    "date": "2026-07-30 13:23:39 +0000",
-    "subject": "fix(site): 最小包导语的稿件版本改由清单派生 (曾硬编码 v61) (#58)"
+    "hash": "6726dd4",
+    "date": "2026-07-31 06:32:04 +0000",
+    "subject": "deliver: 反向对账后补回图形摘要与亮点 (四件 -> 六件)"
   },
   "has_encrypted_core": true,
   "project": {
     "title": "Desert soil resistome stability masks Actinobacteria-linked compositional restructuring along a drought gradient",
     "primary_track": "Environmental Research",
     "secondary_track": "Scientific Data",
-    "phase": "ER 投稿包已收口为 v64（图形摘要标题与稿件题名统一：GA 首行『Desert soil resistome: total stability masks…』→『Desert soil resistome stability masks…』；GA 为 Elsevier 独立上传件、不嵌正文，故历轮稿件内校验器均查不到此分歧；变动仅限 GA 三件（PDF/PNG/TIF）且像素差异局限于标题首行（行 45–88 / 共 1308）；Manuscript_v63.docx 与 v63 逐字节一致、故稿件文件名仍为 v63；新增 _flatten_tif_rgb.py 把重渲后的 RGBA TIFF 回扣为 RGB 无 alpha（像素无损）；_pack_ER_zip_v64.py 落地，投稿包 v64 新 SHA A3B7EACA…）；此前 v63（承 v62 全部图/表/锁定科学值/统计/结论/图栅格像素不变，仅稿件文字层：删除 Results §3.4 两处残留 reference 式年份 token『CARD (2023)』『the 2009 ARDB annotation』→『CARD』『the legacy ARDB annotation』，落实导师『结果里不留隐身参考文献』；build_v63.py 断言恰 2 处命中、Results 年份 token 归零；_pack_ER_zip_v63.py 落地；投稿包 v63 新 SHA A32D1C60…）；此前 v62（承 v61 科学内容不变，格式合规+图件收敛: 主图 10→7（旧 Fig5 热图/Fig7 方差分解/Fig8 Mantel 降为 SI Fig.S4-S6；旧 Fig6→Fig5/旧 Fig9→Fig6/旧 Fig10→Fig7），SI 图扩为 S1-S6；正文双倍行距；残留 eastAsia=宋体 run 标记归 Times New Roman；投稿 TIFF 由 RGBA 扁平化为 RGB 无 alpha（像素无损/300dpi/LZW）；Table S7 去重（PERMANOVA 表为唯一 Table S7，PCoA 坐标矩阵改名源数据）；build_v62.py + _pack_ER_zip_v62.py 落地；投稿包 v62 新 SHA 2E3CBCA6…）；v61（承 v60，导师批注收口: 删除 Results §3.2 悬垂内部交叉引用 '(q = 0.090); see the risk-classification results below.'→'(q = 0.090).'，无任何数据/统计/图/表/图注/编号改动，图数仍 10 主+3 SI，全部图栅格与 v60 字节一致；build_v61.py 落地；投稿包 v61 新 SHA C58AF98E…）；v61 之前 v60 图表出版质量收口: 清除全部出版图内部 QA/交叉校验脚手架文字[AUDIT_CROSSCHECK/R·vegan/adonis2/rel-abund/'this study:'双计数/ns-FDR]、网络图不再打印与权威值冲突的 Python 重建计数[权威 66节点/286边/Q=0.159 仅存于图注与 GA]、修复研究区地图 A/B/C 叠标(改磁化 transect 内插图)+PCoA 环境矢量标签与 PERMANOVA 框压点+Alpha Chao1 注记+热图副标题拥挤; 仅图内文字/排版变动, 无任何数据/统计/结论/编号/表格/图注改动, 图数仍 10 主+3 SI; Manuscript_v60.docx 由 v59 仅换净化栅格重嵌, build_v60.py 落地）；反向审计 2026-07-25d 正文/统计文本层收口：Table3 多因子 PERMANOVA Total Df 43→42（对齐权威 R adonis2 输出 R_validation_report.txt 第66行 Total 42=n-1）、摘要 em-dash 插语修复、Discussion 4.1 悬垂句重写（Fazal et al., 2025）；图件/拓扑/统计值/结论/编号全不变；投稿包 v60 SHA 2E7280D1…（承 2026-07-25c 出版布局深修：网络模块环形排布/PCoA 矢量扇形错位/α删冗余 Chao1 面板/FigS4 指示种依 Methods IndVal>40&P<0.05 判据/风险饼与网络条 Rank I 引线注记；拓扑 66/286/Q=0.159、统计、锁定值、编号、表格全不变）；校验器闭合(font 14/reverse 56/deep 73/cross 60/lineage 18/zip 78/complete 93 除 F3)；唯余 F3 人类门（第一作者 ORCID 核实、5 位审稿人邮箱+COI、APC/提交系统）",
-    "verified_at": "2026-07-30"
+    "phase": "ER 投稿包已收口为 v65（多视角审计 P0–P3 全条闭合；含一处实质科学订正：v63/v64 的 Table S8 与 Results §3.6 取自 L2_L3/01_abundance_class_rel.csv，而仓内 网络复现_from_raw/README.md 早已判定该矩阵对稀有 ARG 类做过上游预加权、复现 847 边而非权威 286 边，属被否定的输入；Fig. 5B/S2 更是 mild/severe 用权威矩阵、moderate 用旧矩阵，三处混用。现全部回到 L4 权威逐 ORF 矩阵（319,005 ORFs，列和=1，79 类全有 Risk_Rank，EC/EC_ARG 别名归一）重算：Rank I 2.27→1.90% H=5.56 P=0.062 方向性不显著（原稿误作 P=0.019 显著）、Rank II 19.51→21.23% H=7.19 P=0.027 显著上升（原稿误作 ns）、Rank III 78.22→76.87% H=8.38 P=0.015 显著下降（原稿误作 ns）；macrolide 敏感性情景 B 下 Rank II 转边缘 P=0.055、Rank III 转不显著 P=0.217，摘要/亮点原本即用 trend 措辞，『总量稳定、组成重构』主结论不变。其余闭合：删风险饼图（与 Fig. 5B 同数据同印字的重复图，落导师『S2 直接删了不要了』），原 S3–S6 顺延为 S2–S5，稿件内嵌图 13→12；Highlights 首条 86→83 字符（Elsevier 上限 85）；图上拼音列码 SHA/FEN/NIAN/VL/VA 显示为 Sand/Silt/Clay/BD/Porosity；Table 4 增列 Partial r / Partial P 使摘要 r=0.343 可溯；Fig. S5 偏 Mantel 柱由硬编码 5 个变量补全为除对照变量 SWC 外全部变量；补 MDR/ARDB 复合码（AMA/AGMBA/ATFBT/GFRE/CF/ITA）定义与处置说明；Results 补引 Fig. 1 / Table S1 / Table S7；图形摘要中栏标题回到面板内、底栏统计条放大到 500 px 宽仍可读、Rank I 明标 ns P=0.062；投稿信日期 May 20→July 30, 2026 且 Rank I 措辞改为方向性；图/表编号收敛为唯一事实源 七_投稿_Submission/_figure_map.py，打包器/图集/站点/校验器共用，并新增 八_验证_Validation/_validate_numbering.py 钉死『正文引用编号 ↔ 映射件数 ↔ ZIP arcname ↔ 内嵌图张数』四方一致；同轮修掉两处『校验器自身锁死过期事实』的反模式：_validate_zip.py 与 _validate_submission_complete.py 曾把投稿信日期 May 20, 2026 钉成必需字面量，正是它把过期日期锁在稿里，现改为只校验信头日期格式）；投稿包 v65 SHA 68E156E9…（55 件，v64 为 58 件，差额即删掉的风险饼图 PDF/PNG/TIFF 三件）；唯余 F3 人类门（第一作者 ORCID、5 位审稿人邮箱+COI、APC/提交系统）",
+    "verified_at": "2026-07-31"
   },
   "submission": {
     "er": {
       "status": "machine_ready_human_confirmation_required",
-      "package": "七_投稿_Submission/ER_Submission_v64_Final.zip",
+      "package": "七_投稿_Submission/ER_Submission_v65_Final.zip",
       "version": "v64 (承 v63 稿件/表/统计/结论/其余 13 图逐字节不变, 仅图形摘要标题与稿件题名统一; 承 v62 图/表/统计/结论不变, 仅删 Results §3.4 两处隐身年份引用; 承 v61 科学内容 + 格式合规/图件收敛: 主图 10→7·旧 Fig5/7/8 降为 SI Fig.S4-S6·SI 扩 S1-S6·全图重编号; 正文双倍行距; eastAsia=宋体→TNR; TIFF RGBA→RGB 无 alpha 像素无损; Table S7 去重; 无任何数据/统计值/结论/图栅格像素改动)",
-      "sha256": "A3B7EACA713388A61EEF8BFFEB196E994F7E00D203C121B8AA4F1689EE6D5F2A",
-      "contents": "Manuscript_v63.docx (承 v64 未动; 正文 Fig.1-7 [Fig.1=研究区地图] + SI S1-S6 内嵌=真 TNR 图; 双倍行距; 图/表/锁定数值承 v61 不变, 仅图号重编+格式洁净) + Cover Letter (ORCID) + Highlights (5) + references.bib; Figs 1-7 + GA (PDF + 300dpi RGB TIFF); SuppFig S1-S6 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列, S7 去重) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD",
-      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v64_Final.zip"
+      "sha256": "68E156E9EF1AE384A9002DD44C043761F91159C67DA592C66AC0CF7F9E43F068",
+      "contents": "Manuscript_v65.docx (正文 Fig.1-7 [Fig.1=研究区地图] + SI S1-S5 内嵌 = 真 TNR 图, 共 12 张; 双倍行距) + Cover Letter + Highlights (5 条, 最长 83 字符) + references.bib; Figs 1-7 + GA (PDF + 300dpi RGB 无 alpha TIFF); SuppFig S1-S5 (PDF+PNG+TIFF); Supplementary Tables S1-S8 (统一 S 系列, S7 去重) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD。共 55 件。",
+      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v65_Final.zip"
     },
     "scidata": {
       "status": "defer_until_er_or_data_doi_ready",
@@ -106,14 +106,14 @@
     {
       "key": "validate_zip",
       "name": "投稿包 SHA 校验 validate_zip",
-      "detail": "PASS exit 0 · 78 PASS / 0 WARN / 0 FAIL (against v63 package) · Highlights tigecycline 软建议已随 v60 收口清零",
+      "detail": "PASS exit 0 · 78 PASS / 0 WARN / 0 FAIL (against v65 package)",
       "status": "pass",
       "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_validate_zip.py"
     },
     {
       "key": "validate_submission_complete",
       "name": "投稿完整性 validate_submission_complete",
-      "detail": "NO-GO exit 2 · 93 PASS / 0 WARN / 1 FAIL · only F3 human blocker remains (against v63 package)",
+      "detail": "NO-GO exit 2 · 90 PASS / 0 WARN / 1 FAIL · only F3 human blocker remains (against v65 package)",
       "status": "blocked",
       "evidence": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation/_validate_submission_complete.py"
     },
@@ -212,7 +212,7 @@
       "title": "图表 · 出版级图件",
       "desc": "Fig.1–7 (Fig.1 研究区地图) + Graphical Abstract + SI 图 S1–S6，脚本化生成·300dpi 扫平 TIFF",
       "icon": "chart",
-      "files": 135,
+      "files": 134,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%89_%E5%9B%BE%E8%A1%A8_Figures"
     },
     {
@@ -226,9 +226,9 @@
     {
       "dir": "五_稿件_Manuscripts",
       "title": "稿件 · 主稿与姐妹稿",
-      "desc": "ER 主稿 v63(终稿·docx 自 v63 未动·图件 10→7 收敛·旧 Fig5/7/8 降为 SI·全图重编号·双倍行距·字体标记洁净) + SciData 姐妹稿 + 中文工作区",
+      "desc": "ER 主稿 v65(终稿·风险等级口径回到 L4 权威矩阵·图件 10→7 收敛·旧 Fig5/7/8 降为 SI·全图重编号·双倍行距·字体标记洁净) + SciData 姐妹稿 + 中文工作区",
       "icon": "doc",
-      "files": 209,
+      "files": 212,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
     },
     {
@@ -236,7 +236,7 @@
       "title": "补充材料",
       "desc": "Supp Fig S1–S6 + Tables S1–S8 (统一 S 系列) + 稳健性报告",
       "icon": "layers",
-      "files": 76,
+      "files": 70,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AD_%E8%A1%A5%E5%85%85%E6%9D%90%E6%96%99_Supplementary"
     },
     {
@@ -244,7 +244,7 @@
       "title": "投稿 · 打包与指南",
       "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
       "icon": "send",
-      "files": 50,
+      "files": 62,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
     },
     {
@@ -252,7 +252,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 93,
+      "files": 102,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
@@ -266,14 +266,14 @@
   ],
   "downloads": [
     {
-      "name": "ER 投稿包 (v64 Final ZIP)",
-      "path": "七_投稿_Submission/ER_Submission_v64_Final.zip",
-      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v64_Final.zip"
+      "name": "ER 投稿包 (v65 Final ZIP)",
+      "path": "七_投稿_Submission/ER_Submission_v65_Final.zip",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v65_Final.zip"
     },
     {
-      "name": "ER 主稿 Manuscript v63 (docx)",
-      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v63.docx",
-      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v63.docx"
+      "name": "ER 主稿 Manuscript v65 (docx)",
+      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v65.docx",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v65.docx"
     },
     {
       "name": "反向审视报告 (2026-07-02)",
@@ -302,40 +302,40 @@
     }
   ],
   "minpack": {
-    "filename": "ARGs_成果最小包_v64.zip",
+    "filename": "ARGs_成果最小包_v65.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 14912963,
-    "sha256": "3B1D0BB9DDAB50329C1F8E8C7DF47EC019F27515A38E467391C1DAAD441109C9",
+    "zip_bytes": 14750237,
+    "sha256": "1D6C9D29972CF6857D8A8CAAA46481CB712AF9BB33C1D4F6EBBA7FEBE640DA9D",
     "items": [
       {
-        "name": "01_核心稿_Manuscript_v63.docx",
+        "name": "01_核心稿_Manuscript_v65.docx",
         "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 图件 10→7 收敛·旧 Fig5/7/8 降为 SI·全图重编号·双倍行距)",
-        "bytes": 3407624
+        "bytes": 3419708
       },
       {
-        "name": "02_核心稿_Manuscript_v63.pdf",
-        "desc": "核心稿件 PDF · 52 页·内嵌真 Times New Roman (无 Word 也能直读·与 docx 同源)",
-        "bytes": 2780823
+        "name": "02_核心稿_Manuscript_v65.pdf",
+        "desc": "核心稿件 PDF · 53 页·内嵌真 Times New Roman (无 Word 也能直读·与 docx 同源)",
+        "bytes": 2684932
       },
       {
         "name": "03_补充表_Supplementary_Tables_S1-S8.docx",
         "desc": "补充表 S1–S8 · 三线表版 (含表题与缩写脚注; 裸 CSV 仍作源数据)",
-        "bytes": 53046
+        "bytes": 53043
       },
       {
         "name": "04_亮点_Highlights.docx",
         "desc": "Highlights · 5 条 (docx 版; 原仓仅 .txt)",
-        "bytes": 36965
+        "bytes": 36953
       },
       {
-        "name": "05_图集_All_Figures_v63.pdf",
-        "desc": "图集 · 主图 Fig.1–7 + 图形摘要 + 补充图 S1–S6 按最终图序合成一册 (矢量·可无损放大)",
-        "bytes": 7346886
+        "name": "05_图集_All_Figures_v65.pdf",
+        "desc": "图集 · 主图 Fig.1–7 + 图形摘要 + 补充图 S1–S5 按最终图序合成一册 (矢量·可无损放大)",
+        "bytes": 7255222
       },
       {
         "name": "图_Graphical_Abstract.png",
         "desc": "图形摘要 · Graphical Abstract",
-        "bytes": 346100
+        "bytes": 342850
       },
       {
         "name": "图_Fig1_StudyArea_Map.png",
@@ -345,12 +345,12 @@
       {
         "name": "图_Fig2_AlphaDiversity.png",
         "desc": "Fig 2 · Alpha 多样性",
-        "bytes": 342040
+        "bytes": 342093
       },
       {
         "name": "图_Fig5_Network_Risk.png",
         "desc": "Fig 5 · 共现网络与风险分类 (66 节点 / 286 边)",
-        "bytes": 518896
+        "bytes": 526249
       },
       {
         "name": "图_Fig6_Actino_vs_Water.png",
