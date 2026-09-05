@@ -4,9 +4,9 @@
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "a700790",
-    "date": "2026-08-01 07:33:16 +0000",
-    "subject": "F6 关闭: 现场照实为 2025-07-06/07/08 所摄, 图注显式声明非采样当日与近似位置"
+    "hash": "102a2da",
+    "date": "2026-08-08 04:26:54 +0000",
+    "subject": "全局反审: 恢复 v56 起丢失的 GenAI 声明段, F3 按'审稿人留空'定案, 补 ER 官方合规硬校"
   },
   "has_encrypted_core": true,
   "project": {
@@ -20,8 +20,8 @@
     "er": {
       "status": "machine_ready_human_confirmation_required",
       "package": "七_投稿_Submission/ER_Submission_v67_Final.zip",
-      "version": "v67 (58 件, SHA256 6BE89CFD…; 图形摘要下架使图件由 61→58 件, Fig. 1 新增三张现场照片 c–e; 交付包 ARGs_最终交付包_v67.zip 五件 7.60 MB SHA256 171EDB77…)。以下为 v66 (承 v65 全部订正, 本轮为三项新增证据: Table S9 深度归一 [原始计数与文库 rho=0.774, 每 Gb KW P=0.038 但对干旱秩 rho=+0.077 P=0.625 呈 U 形 → 全稿 stability 改写为无单调趋势]; Table S10 干旱×站点完全共线 [n_site=3, 站点置换退化 exact P=1.000, 最小可达 P=1/6 → 因果措辞全稿降级为关联]; Table S11 + Fig. S6 读段级可移动性标记筛查 [总量沿干旱无趋势 q=0.852、与 ARG ORFs/Gb 无关 rho=-0.034、仅 relaxase 上升 q=0.038; 读段级关联而非 contig 级邻接]。另含排版归位: Fig. S5/S6 与其标签错位纠正 (实质错误)、图区手插分页符与 2 张整页空白清除 (稿件 PDF 57→52 页)、Table 4 由 655 pt 越版心收回 468 pt 版心、四表单倍行距与表头跨页重复, 新增 _validate_layout.py 钉死; v66.1 字体·语言收尾后重打: 图内数学字体由 STIX 归一为真 TNR (14 张出版图零非-TNR 字体)、Table S9/S10/S11 的 Note 列由中文改英文、references.bib 投稿副本剥离内部审计注释与两条 DEPRECATED 墓碑、补充管线中文路径英文化、投稿信/亮点项目符号由 Symbol(OpenSymbol) 改真 TNR U+2022、重渲 TIFF 落盘即扁平化为 RGB (不再依赖人工补跑 _flatten_tif_rgb.py), 新增 _validate_fonts_language.py (51 项)。61 件, SHA256 A9A89B64…)",
-      "sha256": "6BE89CFDFC4C8DFB553E1FD5BA8ABB84C4849930DED2B73FF265D5D372D7FC40",
+      "version": "v67 (58 件, SHA256 294F7337…; 图形摘要下架使图件由 61→58 件, Fig. 1 新增三张现场照片 c–e; 交付包 ARGs_最终交付包_v67.zip 五件 7.61 MB SHA256 208F9A89…)。以下为 v66 (承 v65 全部订正, 本轮为三项新增证据: Table S9 深度归一 [原始计数与文库 rho=0.774, 每 Gb KW P=0.038 但对干旱秩 rho=+0.077 P=0.625 呈 U 形 → 全稿 stability 改写为无单调趋势]; Table S10 干旱×站点完全共线 [n_site=3, 站点置换退化 exact P=1.000, 最小可达 P=1/6 → 因果措辞全稿降级为关联]; Table S11 + Fig. S6 读段级可移动性标记筛查 [总量沿干旱无趋势 q=0.852、与 ARG ORFs/Gb 无关 rho=-0.034、仅 relaxase 上升 q=0.038; 读段级关联而非 contig 级邻接]。另含排版归位: Fig. S5/S6 与其标签错位纠正 (实质错误)、图区手插分页符与 2 张整页空白清除 (稿件 PDF 57→52 页)、Table 4 由 655 pt 越版心收回 468 pt 版心、四表单倍行距与表头跨页重复, 新增 _validate_layout.py 钉死; v66.1 字体·语言收尾后重打: 图内数学字体由 STIX 归一为真 TNR (14 张出版图零非-TNR 字体)、Table S9/S10/S11 的 Note 列由中文改英文、references.bib 投稿副本剥离内部审计注释与两条 DEPRECATED 墓碑、补充管线中文路径英文化、投稿信/亮点项目符号由 Symbol(OpenSymbol) 改真 TNR U+2022、重渲 TIFF 落盘即扁平化为 RGB (不再依赖人工补跑 _flatten_tif_rgb.py), 新增 _validate_fonts_language.py (51 项)。61 件, SHA256 A9A89B64…)",
+      "sha256": "294F7337034A6FBE6CF22ED287006C552E624C18297EDDBC8D78F06855273B2E",
       "contents": "Manuscript_v66.docx (正文 Fig.1-7 [Fig.1=研究区地图] + SI S1-S6 内嵌 = 真 TNR 图, 共 13 张; 双倍行距) + Cover Letter + Highlights (5 条, 最长 83 字符) + references.bib; Figs 1-7 + GA (PDF + 300dpi RGB 无 alpha TIFF); SuppFig S1-S6 (PDF+PNG+TIFF); Supplementary Tables S1-S11 (统一 S 系列) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD。共 61 件。",
       "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v67_Final.zip"
     },

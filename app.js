@@ -84,7 +84,7 @@ async function deriveKey(pass, salt) {
     mat, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
 }
 /* 拉取二进制密文, 带下载进度回调; URL 附 ?v=<commit> 缓存破坏, 部署更新即拉新, 同 commit 复用缓存(304 秒开) */
-async function fetchEncBytes(url, onProgress) {
+async function fetchEncBytesOnce(url, onProgress) {
   const ctl = new AbortController();
   const timer = setTimeout(() => ctl.abort(), 60000);   // 60s 硬超时, 杜绝永久卡"解密中"
   try {
@@ -111,6 +111,20 @@ async function fetchEncBytes(url, onProgress) {
   } finally {
     clearTimeout(timer);
   }
+}
+/* CDN 偶发连接中断(ERR_HTTP2_PROTOCOL_ERROR / ERR_CONNECTION_CLOSED)会使大密文一次拉取失败;
+   自动重试 3 次(退避 0.6s/1.2s), 避免一次抖动就永久卡"解密中"。 */
+async function fetchEncBytes(url, onProgress) {
+  let lastErr;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      return await fetchEncBytesOnce(url, onProgress);
+    } catch (e) {
+      lastErr = e;
+      if (attempt < 2) await new Promise(r => setTimeout(r, 600 * (attempt + 1)));
+    }
+  }
+  throw lastErr;
 }
 /* 用口令解密一个 二进制(salt|iv|ct) 密文文件, 返回明文字节 */
 async function decryptEncFile(url, pass, onProgress) {
@@ -141,9 +155,14 @@ async function ensureFigures() {
   if (FIGS) return FIGS;
   if (FIGS_LOADING) return FIGS_LOADING;
   FIGS_LOADING = (async () => {
-    const obj = await decryptJson("figures.enc", PASS);
-    FIGS = obj.figures || [];
-    return FIGS;
+    try {
+      const obj = await decryptJson("figures.enc", PASS);
+      FIGS = obj.figures || [];
+      return FIGS;
+    } catch (e) {
+      FIGS_LOADING = null;   // 失败不缓存 rejected Promise, 下次进入图库可自动重试
+      throw e;
+    }
   })();
   return FIGS_LOADING;
 }
