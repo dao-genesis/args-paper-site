@@ -357,13 +357,13 @@ function renderOverview(d) {
   const validators = d.validators;
   const passN = validators.filter(v => v.status === "pass").length;
   const blockN = d.blanks.filter(b => b.blocking).length;
-  const readiness = 92;
+  const readiness = Math.max(0, 100 - blockN * 4);
   document.getElementById("ring").style.setProperty("--p", readiness + "%");
   document.getElementById("ring-pct").textContent = readiness + "%";
 
   const kpis = [
     { n: passN + "/" + validators.length, l: "验证器 PASS", cls: "ok" },
-    { n: blockN, l: "阻塞人类门 (F3/F4)", cls: blockN ? "block" : "ok" },
+    { n: blockN, l: blockN ? "阻塞人类门 (" + d.blanks.filter(b => b.blocking).map(b => b.id.toUpperCase()).join("/") + ")" : "人类门已闭合", cls: blockN ? "block" : "ok" },
     { n: d.modules.length, l: "项目板块", cls: "" },
     { n: d.modules.reduce((a, m) => a + m.files, 0), l: "受管文件", cls: "" },
   ];
