@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-10-02 12:18 UTC",
+  "generated_at": "2026-10-08 06:16 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "6d0090c",
-    "date": "2026-10-02 14:17:15 +0200",
-    "subject": "闭环 2026-10-02: 模块 README v39 残留清零 + app.js 去硬编码 + 同步链路文档重建"
+    "hash": "3e1044a",
+    "date": "2026-10-07 20:58:17 +0200",
+    "subject": "新 R2 账号闭环: gvlepbx 账号承接备份链主目标 (双写架构)"
   },
   "has_encrypted_core": true,
   "project": {
     "title": "Desert soil resistome stability masks Actinobacteria-linked compositional restructuring along a drought gradient",
     "primary_track": "Environmental Research",
     "secondary_track": "Scientific Data",
-    "phase": "v67（2026-08-01）：只落导师 2026-08-01 微信的两句话，其余一律不动（无为）。(1)「你的图摘要不放了吧，感觉放了也不能起到加分效果」——图形摘要退出投稿面：_figure_map.py 新增 GA_RETIRED 布尔为唯一开关，ER 投稿包 (61→58 件)、最终交付包（六件→五件）、图集 PDF (14→13 图)、加密站点（图件 14→13、最小包 14→13 项）全部不再收录；GA 源图与生成器仍在仓内，开关置 False 即原样复活（退场不等于毁尸）。校验器同步改口径：_validate_numbering 与 _validate_submission_complete 由「必须有 GA」反转为「不得有 GA」，_validate_zip / _cross_verify_figures / _reverse_audit_figures / _verify_figure_fonts 的 GA 项按开关跳过。(2)「采样图找王美玉」——王美玉师姐提供的三张轻/中/重度干旱现场实拍已入 Fig. 1 底部 (c–e)，图高 6.5→8.45 in，原四个面板物理尺寸与相对位置不变、仅整体上移，故地图部分像素内容与 v66 一致。三图存入 一_数据_Data/L1_源_Source/field_photos/ 并附 PROVENANCE.md。诚实边界：微信导出已抹去全部 EXIF（无 GPS/日期/机型），站点指派 A/B/C 是按植被盖度单调性反推而非元数据认定，故图注只写 representative field photographs 与植被盖度沿梯度下降，不写日期、不写坐标、不写摄影者；指派确认列为新人类门 F6。防反接硬断言：道_studyarea_map.py 出图前计算三图绿度代理并要求 A>B>C（实测 0.092>0.012>0.003），若指派与之相反则当场 FATAL——首次拷贝时正是按微信时间戳顺序把 A 与 C 接反了，此断言即为此而设。承前 v66.1 全部结论、数值与其余图件字节不变。以下为 v66 原文：以审稿人视角反读全稿后自补三块最可能被打的短板，均为新增证据而非改数。(1) 测序深度归一 D16/Table S9 —— 原始 ARG ORF 计数与文库碱基数 Spearman rho=0.774 (P<1e-4)、文库 6.4–13.1 Gb；换算每 Gb 后同一 KW 由 P=0.064 变 0.038，若审稿人自行归一，「总量稳定」会被当场推翻。深查后结论仍立但理由必须改写：显著性来自 moderate 偏低的 U 形而非干旱单调效应（每 Gb 对干旱秩 rho=+0.077 P=0.625、对 SWC rho=-0.055 P=0.726；bulk P=0.070、rhizosphere P=0.226；richness 对 log 文库残差化后 P=0.445），故全稿「stability」改写为「无单调趋势」，摘要/亮点/投稿信同改，两个校验器里把 stability 钉成必需关键词的断言也随事实改为 monotonic。(2) 干旱×站点完全共线 D17/Table S10 —— A/B/C 三站各承一个干旱等级（15/12/16），drought 的独立重复单元是 3 个站点而非 43 个样本；以站点为置换单元时 3!=6 种指派同属一个分割、pseudo-F 恒等（exact P=1.000 检验退化），即便不退化最小可达 P 也只有 1/6；SWC 方差站间占比 0.91、环境变量两两 rho 达 0.87 —— 站点尺度的干旱效应在本设计下原理上不可检验，全稿因果措辞降级为梯度关联，「养分强于水分」只作样本尺度可分离性陈述；同表给出不依赖该共线的站内证据（土室三站内各自 P≤0.007，植物种仅一站显著）。(3) 读段级可移动性标记筛查 D18/Table S11 + Fig. S6 —— 43/43 样本各 2,000,000 读段 DIAMOND blastx 比对 UniRef50 五类可移动性蛋白 274,302 簇（多义簇 2,378 按固定优先级归并，避免建库顺序决定分类）：标记总量沿干旱无趋势（KW P=0.837 BH q=0.852、对干旱秩 rho=+0.069）、与 ARG ORFs/Gb 不相关（rho=-0.034）——与「原位产生而非水平转移驱动」一致；五类中仅 relaxase 单调上升（217→270 HPM，rho=+0.411，q=0.038），分土室方向相反（bulk 升 P=0.0037、rhizosphere 降 P=0.0003）；7/66 个 ARG class 与标记总量相关过 BH。边界写死：读段级丰度关联，非 contig 级 ARG–MGE 物理邻接，全稿禁用 co-localized/carried on plasmids/horizontally transferred。配套：补充表 S8→S11、补充图 S5→S6，_figure_map.py 仍为唯一编号事实源；又修掉三处「校验器/构建器自身锁死过期版本」的同类反模式（_validate_zip.py 与 _validate_submission_complete.py 硬编码 v65 包与 v65 稿、docs/_build_site.py 硬编码 v65 稿与 S1-S8，均改为按版本号自适应取最新）。承前 v65.1 全部结论不变。",
-    "verified_at": "2026-10-02"
+    "phase": "v68（2026-10-08 论文本体反审）：只落可证伪的事实性修复 —— (1) §3.2 交叉引用 2.4→2.5; (2) §3.5 Five→Six 补 AS (r=0.123, P=0.015, Table 4 十个名义显著变量之一); (3) §3.7 正文数值由 8 GB 运行对齐到 Fig. 6/Table S8 的 16 GB 运行 (47.8/69.2→48.7/67.6, P=0.99→0.96, -0.62/0.010→-0.65/0.006, ≈50–64%→≈41–62%, caveat 5-9%→9-18%; 8 GB 作浅库对照保留于段末与 Table S6); (4) §3.7 补 mupirocin-like (Fig. 7 第三强 +0.55, P=0.0002); (5) §2.3 AP/AS 补全称; (6) §2.5 不透明代码清单补 DF; (7) Table 4 注 soil volume weight→bulk density; (8) Fig. 3/4/5/6 图注与出版图逐项对齐 (Fig. 4 图注原描述旧版设计——η² 为 x 轴/η²=0.10 阈值/top 10——实际为 log2FC–log10P 火山图 + P/FDR 双线 + top 18 + 五类配色); (9) Fig. 4 生成器图例补 Sig. (non-monotonic) 条目并只重渲该图 (像素差异限于图例带 51 行 + 字体版本噪声); (10) 站点表格渲染丢格 bug 修复 (docs/_build_site.py 原按文本去重误删合法重复值, Table 4 TP/SOC 的 Partial P=0.001 曾丢失; docx/ZIP 无损)。科学值/统计结论/编号零改动。以下为 v67 原文：只落导师 2026-08-01 微信的两句话，其余一律不动（无为）。(1)「你的图摘要不放了吧，感觉放了也不能起到加分效果」——图形摘要退出投稿面：_figure_map.py 新增 GA_RETIRED 布尔为唯一开关，ER 投稿包 (61→58 件)、最终交付包（六件→五件）、图集 PDF (14→13 图)、加密站点（图件 14→13、最小包 14→13 项）全部不再收录；GA 源图与生成器仍在仓内，开关置 False 即原样复活（退场不等于毁尸）。校验器同步改口径：_validate_numbering 与 _validate_submission_complete 由「必须有 GA」反转为「不得有 GA」，_validate_zip / _cross_verify_figures / _reverse_audit_figures / _verify_figure_fonts 的 GA 项按开关跳过。(2)「采样图找王美玉」——王美玉师姐提供的三张轻/中/重度干旱现场实拍已入 Fig. 1 底部 (c–e)，图高 6.5→8.45 in，原四个面板物理尺寸与相对位置不变、仅整体上移，故地图部分像素内容与 v66 一致。三图存入 一_数据_Data/L1_源_Source/field_photos/ 并附 PROVENANCE.md。诚实边界：微信导出已抹去全部 EXIF（无 GPS/日期/机型），站点指派 A/B/C 是按植被盖度单调性反推而非元数据认定，故图注只写 representative field photographs 与植被盖度沿梯度下降，不写日期、不写坐标、不写摄影者；指派确认列为新人类门 F6。防反接硬断言：道_studyarea_map.py 出图前计算三图绿度代理并要求 A>B>C（实测 0.092>0.012>0.003），若指派与之相反则当场 FATAL——首次拷贝时正是按微信时间戳顺序把 A 与 C 接反了，此断言即为此而设。承前 v66.1 全部结论、数值与其余图件字节不变。以下为 v66 原文：以审稿人视角反读全稿后自补三块最可能被打的短板，均为新增证据而非改数。(1) 测序深度归一 D16/Table S9 —— 原始 ARG ORF 计数与文库碱基数 Spearman rho=0.774 (P<1e-4)、文库 6.4–13.1 Gb；换算每 Gb 后同一 KW 由 P=0.064 变 0.038，若审稿人自行归一，「总量稳定」会被当场推翻。深查后结论仍立但理由必须改写：显著性来自 moderate 偏低的 U 形而非干旱单调效应（每 Gb 对干旱秩 rho=+0.077 P=0.625、对 SWC rho=-0.055 P=0.726；bulk P=0.070、rhizosphere P=0.226；richness 对 log 文库残差化后 P=0.445），故全稿「stability」改写为「无单调趋势」，摘要/亮点/投稿信同改，两个校验器里把 stability 钉成必需关键词的断言也随事实改为 monotonic。(2) 干旱×站点完全共线 D17/Table S10 —— A/B/C 三站各承一个干旱等级（15/12/16），drought 的独立重复单元是 3 个站点而非 43 个样本；以站点为置换单元时 3!=6 种指派同属一个分割、pseudo-F 恒等（exact P=1.000 检验退化），即便不退化最小可达 P 也只有 1/6；SWC 方差站间占比 0.91、环境变量两两 rho 达 0.87 —— 站点尺度的干旱效应在本设计下原理上不可检验，全稿因果措辞降级为梯度关联，「养分强于水分」只作样本尺度可分离性陈述；同表给出不依赖该共线的站内证据（土室三站内各自 P≤0.007，植物种仅一站显著）。(3) 读段级可移动性标记筛查 D18/Table S11 + Fig. S6 —— 43/43 样本各 2,000,000 读段 DIAMOND blastx 比对 UniRef50 五类可移动性蛋白 274,302 簇（多义簇 2,378 按固定优先级归并，避免建库顺序决定分类）：标记总量沿干旱无趋势（KW P=0.837 BH q=0.852、对干旱秩 rho=+0.069）、与 ARG ORFs/Gb 不相关（rho=-0.034）——与「原位产生而非水平转移驱动」一致；五类中仅 relaxase 单调上升（217→270 HPM，rho=+0.411，q=0.038），分土室方向相反（bulk 升 P=0.0037、rhizosphere 降 P=0.0003）；7/66 个 ARG class 与标记总量相关过 BH。边界写死：读段级丰度关联，非 contig 级 ARG–MGE 物理邻接，全稿禁用 co-localized/carried on plasmids/horizontally transferred。配套：补充表 S8→S11、补充图 S5→S6，_figure_map.py 仍为唯一编号事实源；又修掉三处「校验器/构建器自身锁死过期版本」的同类反模式（_validate_zip.py 与 _validate_submission_complete.py 硬编码 v65 包与 v65 稿、docs/_build_site.py 硬编码 v65 稿与 S1-S8，均改为按版本号自适应取最新）。承前 v65.1 全部结论不变。",
+    "verified_at": "2026-10-08"
   },
   "submission": {
     "er": {
       "status": "machine_ready_human_confirmation_required",
-      "package": "七_投稿_Submission/ER_Submission_v67_Final.zip",
-      "version": "v67 (58 件, SHA256 294F7337…; 图形摘要下架使图件由 61→58 件, Fig. 1 新增三张现场照片 c–e; 交付包 ARGs_最终交付包_v67.zip 五件 7.61 MB SHA256 208F9A89…)。以下为 v66 (承 v65 全部订正, 本轮为三项新增证据: Table S9 深度归一 [原始计数与文库 rho=0.774, 每 Gb KW P=0.038 但对干旱秩 rho=+0.077 P=0.625 呈 U 形 → 全稿 stability 改写为无单调趋势]; Table S10 干旱×站点完全共线 [n_site=3, 站点置换退化 exact P=1.000, 最小可达 P=1/6 → 因果措辞全稿降级为关联]; Table S11 + Fig. S6 读段级可移动性标记筛查 [总量沿干旱无趋势 q=0.852、与 ARG ORFs/Gb 无关 rho=-0.034、仅 relaxase 上升 q=0.038; 读段级关联而非 contig 级邻接]。另含排版归位: Fig. S5/S6 与其标签错位纠正 (实质错误)、图区手插分页符与 2 张整页空白清除 (稿件 PDF 57→52 页)、Table 4 由 655 pt 越版心收回 468 pt 版心、四表单倍行距与表头跨页重复, 新增 _validate_layout.py 钉死; v66.1 字体·语言收尾后重打: 图内数学字体由 STIX 归一为真 TNR (14 张出版图零非-TNR 字体)、Table S9/S10/S11 的 Note 列由中文改英文、references.bib 投稿副本剥离内部审计注释与两条 DEPRECATED 墓碑、补充管线中文路径英文化、投稿信/亮点项目符号由 Symbol(OpenSymbol) 改真 TNR U+2022、重渲 TIFF 落盘即扁平化为 RGB (不再依赖人工补跑 _flatten_tif_rgb.py), 新增 _validate_fonts_language.py (51 项)。61 件, SHA256 A9A89B64…)",
-      "sha256": "294F7337034A6FBE6CF22ED287006C552E624C18297EDDBC8D78F06855273B2E",
-      "contents": "Manuscript_v67.docx (正文 Fig.1-7 [Fig.1=研究区地图含三站现场照片 c–e] + SI S1-S6 内嵌 = 真 TNR 图, 共 13 张; 双倍行距; §Declaration of GenAI 已恢复) + Cover Letter + Highlights (5 条, 最长 83 字符) + references.bib; Figs 1-7 (PDF + 300dpi RGB 无 alpha TIFF; 图形摘要已按导师指示下架, GA_RETIRED=True); SuppFig S1-S6 (PDF+PNG+TIFF); Supplementary Tables S1-S11 (统一 S 系列) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD。共 58 件。",
-      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v67_Final.zip"
+      "package": "七_投稿_Submission/ER_Submission_v68_Final.zip",
+      "version": "v68 (58 件, SHA256 7C13D3D1…; 论文本体反审修复: 12 段正文/图注文本 + Fig. 4 图例补条目重渲 + 站点表格丢格修复; 交付包 ARGs_最终交付包_v68.zip 五件 8,039,516 B SHA256 04E32EAB…)。以下为 v67: v67 (58 件, SHA256 294F7337…; 图形摘要下架使图件由 61→58 件, Fig. 1 新增三张现场照片 c–e; 交付包 ARGs_最终交付包_v67.zip 五件 7.61 MB SHA256 208F9A89…)。以下为 v66 (承 v65 全部订正, 本轮为三项新增证据: Table S9 深度归一 [原始计数与文库 rho=0.774, 每 Gb KW P=0.038 但对干旱秩 rho=+0.077 P=0.625 呈 U 形 → 全稿 stability 改写为无单调趋势]; Table S10 干旱×站点完全共线 [n_site=3, 站点置换退化 exact P=1.000, 最小可达 P=1/6 → 因果措辞全稿降级为关联]; Table S11 + Fig. S6 读段级可移动性标记筛查 [总量沿干旱无趋势 q=0.852、与 ARG ORFs/Gb 无关 rho=-0.034、仅 relaxase 上升 q=0.038; 读段级关联而非 contig 级邻接]。另含排版归位: Fig. S5/S6 与其标签错位纠正 (实质错误)、图区手插分页符与 2 张整页空白清除 (稿件 PDF 57→52 页)、Table 4 由 655 pt 越版心收回 468 pt 版心、四表单倍行距与表头跨页重复, 新增 _validate_layout.py 钉死; v66.1 字体·语言收尾后重打: 图内数学字体由 STIX 归一为真 TNR (14 张出版图零非-TNR 字体)、Table S9/S10/S11 的 Note 列由中文改英文、references.bib 投稿副本剥离内部审计注释与两条 DEPRECATED 墓碑、补充管线中文路径英文化、投稿信/亮点项目符号由 Symbol(OpenSymbol) 改真 TNR U+2022、重渲 TIFF 落盘即扁平化为 RGB (不再依赖人工补跑 _flatten_tif_rgb.py), 新增 _validate_fonts_language.py (51 项)。61 件, SHA256 A9A89B64…)",
+      "sha256": "7C13D3D1AD3B0CBBD16EA2E987206F8A6D0242C912404FE1EDE0FEFCBD921FAB",
+      "contents": "Manuscript_v68.docx (正文 Fig.1-7 [Fig.1=研究区地图含三站现场照片 c–e] + SI S1-S6 内嵌 = 真 TNR 图, 共 13 张; 双倍行距; §Declaration of GenAI 已恢复) + Cover Letter + Highlights (5 条, 最长 83 字符) + references.bib; Figs 1-7 (PDF + 300dpi RGB 无 alpha TIFF; 图形摘要已按导师指示下架, GA_RETIRED=True); SuppFig S1-S6 (PDF+PNG+TIFF); Supplementary Tables S1-S11 (统一 S 系列) + SourceData_PCoA_Aitchison_coordinates.csv; Pipeline_SRA_to_CARD。共 58 件。",
+      "download": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v68_Final.zip"
     },
     "scidata": {
       "status": "defer_until_er_or_data_doi_ready",
@@ -197,7 +197,7 @@
       "title": "道 · 治理与单源真相",
       "desc": "项目宪法/权威单源/历史审计/与导师交流收件箱",
       "icon": "compass",
-      "files": 34,
+      "files": 37,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E3%80%87_%E9%81%93_DAO"
     },
     {
@@ -213,7 +213,7 @@
       "title": "分析 · 可复现管线",
       "desc": "R/vegan + Python 全链路复归、敏感性分析、E2E 校验",
       "icon": "flask",
-      "files": 46,
+      "files": 47,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%8C_%E5%88%86%E6%9E%90_Analysis"
     },
     {
@@ -221,7 +221,7 @@
       "title": "图表 · 出版级图件",
       "desc": "Fig.1–7 (Fig.1 研究区地图 + 三站现场照片) + SI 图 S1–S6，脚本化生成·300dpi 扫平 TIFF",
       "icon": "chart",
-      "files": 135,
+      "files": 138,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%89_%E5%9B%BE%E8%A1%A8_Figures"
     },
     {
@@ -235,9 +235,9 @@
     {
       "dir": "五_稿件_Manuscripts",
       "title": "稿件 · 主稿与姐妹稿",
-      "desc": "ER 主稿 v67(审稿人视角反读加固·测序深度归一稳健性 Table S9·干旱与站点完全共线声明 Table S10·因果措辞全稿降级为关联) + SciData 姐妹稿 + 中文工作区",
+      "desc": "ER 主稿 v68(审稿人视角反读加固·测序深度归一稳健性 Table S9·干旱与站点完全共线声明 Table S10·因果措辞全稿降级为关联) + SciData 姐妹稿 + 中文工作区",
       "icon": "doc",
-      "files": 223,
+      "files": 226,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
     },
     {
@@ -253,7 +253,7 @@
       "title": "投稿 · 打包与指南",
       "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
       "icon": "send",
-      "files": 75,
+      "files": 84,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
     },
     {
@@ -261,7 +261,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 114,
+      "files": 119,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
@@ -275,14 +275,14 @@
   ],
   "downloads": [
     {
-      "name": "ER 投稿包 (v67 Final ZIP)",
-      "path": "七_投稿_Submission/ER_Submission_v67_Final.zip",
-      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v67_Final.zip"
+      "name": "ER 投稿包 (v68 Final ZIP)",
+      "path": "七_投稿_Submission/ER_Submission_v68_Final.zip",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission/ER_Submission_v68_Final.zip"
     },
     {
-      "name": "ER 主稿 Manuscript v67 (docx)",
-      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v67.docx",
-      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v67.docx"
+      "name": "ER 主稿 Manuscript v68 (docx)",
+      "path": "五_稿件_Manuscripts/主稿_ER终稿/稿件_Manuscript_v68.docx",
+      "url": "https://github.com/dao-genesis/ARGs-Paper/raw/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts/%E4%B8%BB%E7%A8%BF_ER%E7%BB%88%E7%A8%BF/%E7%A8%BF%E4%BB%B6_Manuscript_v68.docx"
     },
     {
       "name": "反向审视报告 (2026-07-02)",
@@ -311,20 +311,20 @@
     }
   ],
   "minpack": {
-    "filename": "ARGs_成果最小包_v67.zip",
+    "filename": "ARGs_成果最小包_v68.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 18137815,
-    "sha256": "EAC8A6F0BCEC362A365A08699FB60FD43B98EB398F532FE3228C7B68C56A7F2B",
+    "zip_bytes": 18195394,
+    "sha256": "A4C8F1ABF344B97CE1BC3B645499EDE1394C857D085BDACFAC9B1CB8309FE9BD",
     "items": [
       {
-        "name": "01_核心稿_Manuscript_v67.docx",
+        "name": "01_核心稿_Manuscript_v68.docx",
         "desc": "核心稿件 · Environmental Research 终稿 (docx 全文; 图件 10→7 收敛·旧 Fig5/7/8 降为 SI·全图重编号·双倍行距)",
-        "bytes": 5137424
+        "bytes": 5152870
       },
       {
-        "name": "02_核心稿_Manuscript_v67.pdf",
+        "name": "02_核心稿_Manuscript_v68.pdf",
         "desc": "核心稿件 PDF · 内嵌真 Times New Roman (无 Word 也能直读·与 docx 同源)",
-        "bytes": 3074579
+        "bytes": 3235946
       },
       {
         "name": "03_补充表_Supplementary_Tables_S1-S11.docx",
@@ -337,9 +337,9 @@
         "bytes": 36965
       },
       {
-        "name": "05_图集_All_Figures_v67.pdf",
+        "name": "05_图集_All_Figures_v68.pdf",
         "desc": "图集 · 主图 Fig.1–7 + 补充图 S1–S6 按最终图序合成一册 (矢量·可无损放大)",
-        "bytes": 7409143
+        "bytes": 7404048
       },
       {
         "name": "图_Fig1_StudyArea_Map.png",
