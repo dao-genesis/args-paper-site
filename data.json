@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-12 10:49 UTC",
+  "generated_at": "2026-10-15 05:42 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
   "git_head": {
-    "hash": "fa6ef7b",
-    "date": "2026-10-08 08:33:41 +0200",
-    "subject": "反审 2026-10-08 (二): 新增站点密文↔稿件一致性回归守卫 (_verify_site_content, 11 PASS)"
+    "hash": "e96c65f",
+    "date": "2026-10-12 12:53:44 +0200",
+    "subject": "反者道之动 2026-10-12: 第二轮论文本体反审 (深挖隐蔽层) — 图件血统 4 图修复 + 恢复 2 件被引补充文件 + power 口径订正 (稿件升 v69)"
   },
   "has_encrypted_core": true,
   "project": {
@@ -197,7 +197,7 @@
       "title": "道 · 治理与单源真相",
       "desc": "项目宪法/权威单源/历史审计/与导师交流收件箱",
       "icon": "compass",
-      "files": 38,
+      "files": 39,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E3%80%87_%E9%81%93_DAO"
     },
     {
@@ -237,7 +237,7 @@
       "title": "稿件 · 主稿与姐妹稿",
       "desc": "ER 主稿 v69(审稿人视角反读加固·测序深度归一稳健性 Table S9·干旱与站点完全共线声明 Table S10·因果措辞全稿降级为关联) + SciData 姐妹稿 + 中文工作区",
       "icon": "doc",
-      "files": 229,
+      "files": 230,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%BA%94_%E7%A8%BF%E4%BB%B6_Manuscripts"
     },
     {
@@ -261,7 +261,7 @@
       "title": "验证 · 多维校验",
       "desc": "深层/图表/ZIP/投稿完整性验证 + 引用审计 + AI 味检测",
       "icon": "shield",
-      "files": 123,
+      "files": 125,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E5%85%AB_%E9%AA%8C%E8%AF%81_Validation"
     },
     {
