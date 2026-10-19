@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19 04:47 UTC",
+  "generated_at": "2026-10-19 04:54 UTC",
   "repo": "dao-genesis/ARGs-Paper",
   "branch": "master",
   "pr_url": "https://github.com/dao-genesis/ARGs-Paper/pulls",
@@ -253,7 +253,7 @@
       "title": "投稿 · 打包与指南",
       "desc": "ER/SciData 投稿包、打包脚本、Editorial Manager 提交指南",
       "icon": "send",
-      "files": 108,
+      "files": 107,
       "link": "https://github.com/dao-genesis/ARGs-Paper/blob/master/%E4%B8%83_%E6%8A%95%E7%A8%BF_Submission"
     },
     {
@@ -313,8 +313,8 @@
   "minpack": {
     "filename": "ARGs_成果最小包_v70.zip",
     "enc_file": "minpack.enc",
-    "zip_bytes": 18204761,
-    "sha256": "7EBB4B4FBCAB44F78FED06FC2A1D10D8DFBC57174F4F928A3E8839323A454BDA",
+    "zip_bytes": 18204764,
+    "sha256": "B956BC6E671D2B516FCA1B3EA51E0B4C26A84AD92A0128B0886D6075E8899B2B",
     "items": [
       {
         "name": "01_核心稿_Manuscript_v70.docx",
@@ -339,7 +339,7 @@
       {
         "name": "05_图集_All_Figures_v70.pdf",
         "desc": "图集 · 主图 Fig.1–7 + 补充图 S1–S6 按最终图序合成一册 (矢量·可无损放大)",
-        "bytes": 7386958
+        "bytes": 7386962
       },
       {
         "name": "图_Fig1_StudyArea_Map.png",
